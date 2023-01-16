@@ -229,3 +229,15 @@ section:nth-child(even) {
   background-color: rgb(170, 86, 23);
   
 } 
+
+.flickity-button {
+  margin-right: 0 !important;
+}
+
+.carousel-cell {
+  width: 50%;
+  height: 80vh;
+  margin-right: 50px;
+  background: #8C8;
+  border-radius: 5px;
+}
