@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <title>landing</title>
     
@@ -16,6 +19,15 @@
             font-family: 'Teko', sans-serif;
             color: white;
         }
+
+        .carousel-cell:before {
+            display: block;
+            text-align: center;
+            line-height: 200px;
+            font-size: 80px;
+            color: white;
+            }    
+    
         
         li > h4::before {
             background: lightgray;
@@ -221,6 +233,11 @@
 
     <section>
         <h2>Past Trips</h2>
+        <div id="pastTripsCarousel">
+            <img src="/images/TheArtemiswithText.svg" class="carousel-cell">
+            <img src="images/TheApollowithText.svg" class="carousel-cell">
+            <img src="images/ISSExpresswithText.svg" class="carousel-cell">
+            </div>
             <ul>
                 <li>
                 Quick Out and Back (departure and return in England): This 4 day trip was custom planned by a group of three out of France who elected to travel with our chaperone! 
@@ -271,5 +288,15 @@
         </ul>
     </footer>
     <script src="js/home.js"></script>
+    <script type="module">
+
+       $("#pastTripsCarousel").flickity({
+        wrapAround: true,
+        autoPlay: 1500,
+        pauseAutoPlayOnHover: false
+    
+       });
+        
+    </script>
 </body>
 </html>
