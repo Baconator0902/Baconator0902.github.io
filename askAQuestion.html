@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ask A Question</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        * {
+            font-family: 'Teko', sans-serif;
+        }
+        input {
+            color: black;
+            width: 40%;
+        }
+        label {
+            color: white;
+        }
+
+        p {
+            margin-top: 1vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="navBackground">
+        
+        <nav id="navBar">
+            <ul>
+                <img src="/images/TotheStarsHomeLogo.svg" style="height: 75%; padding: 0; top: 0;">
+                <li>
+                    <a href="index.html">Landing</a>
+                </li>
+                <li>
+                    <a href="info.html">Info</a>
+                </li>
+                <li>
+                    <a href="book.html">Book</a>
+                </li>
+                <li>
+                    <a href="safety.html">Safety</a>
+                </li>
+                <li>
+                    <a href="planTrip.html">Plan a trip</a>
+                </li>
+                <li>
+                    <a href="signUpLogin.html">Sign up/Log in</a>
+                </li>
+            </ul>
+           </nav>
+        </div>
+
+    <h1>Ask a question</h1>
+
+    <img src="images/home_page_neon_outline.png" id="aboutImage" style="transform: rotate(-90deg);">
+    <img src="images/homepage-04.png" id="aboutImageBackground">
+
+
+    <form action="/feedback" method="post" id="form" style="padding-bottom: 10vh;">
+        <p>Name</p> 
+            <input type="text" name="username" id="uName" size="50" placeholder="First Last" required pattern="[A-Z][a-z]+\s[A-Z][a-z]+">
+        <p id="emailText">Email</p> 
+            <input type="email" name="email" id="email" size="30" placeholder="example.email@gmail.com" required pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b">
+        
+        <p>Subject</p>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">Company</label><br>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">Personal</label><br>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">Donation</label><br>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">Feedback</label><br>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">Other</label>
+            <br>
+
+        <p>Question</p>
+
+            <input type="text" id="text" name="text" value="-Question here-">
+        
+        
+        
+        <p id="dateText">Date</p> 
+            <input type="date" name="date" id="date" required pattern="\d{2}/d{2}/d{2,4}" placeholder="dd/mm/yyyy">
+        
+            <br>
+
+        <input type="submit" name="submit" style="width: 20vw; height: 10vh; font-size: 1em;">
+    
+    </form>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet"> 
+    <script src="js/booking.js"></script>
+    <script src="navbar.js"></script>
+    <title>book</title>
+
+    <style>
+        * {
+            font-family: 'Teko', sans-serif;
+        }
+        
+        #buttonsDropDowns {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        button {
+            width: 30%;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="navBackground">
+        
+        <nav id="navBar">
+            <ul>
+                <img src="/images/TotheStarsHomeLogo.svg" style="height: 75%; padding: 0; top: 0;">
+                <li>
+                    <a href="index.html">Landing</a>
+                </li>
+                <li>
+                    <a href="info.html">Info</a>
+                </li>
+                <li>
+                    <a href="book.html">Book</a>
+                </li>
+                <li>
+                    <a href="safety.html">Safety</a>
+                </li>
+                <li>
+                    <a href="planTrip.html">Plan a trip</a>
+                </li>
+                <li>
+                    <a href="signUpLogin.html">Sign up/Log in</a>
+                </li>
+            </ul>
+           </nav>
+        </div>
+
+        <div id="buttonsDropDowns">
+            <button type="button" onclick="showBookFlight()">
+                Book a Trip
+            </button>
+            <button type="button" onclick="showTraining()">
+                Book a Flight Training
+            </button>
+            <button type="button" onclick="showBookPhysical()">
+                Book a Physical Astronaut
+            </button>
+        </div>
+        <div class="hiddenDropdown" id="bookTripDIV">
+            
+            <form>
+                <h2>Book a Trip</h2>
+                <label for="first_name">First name:</label>
+                <input type="text" id="first_name" name="first_name" placeholder="John" required>
+                <br>
+                <label for="last_name">Last name:</label>
+                <input type="text" id="last_name" name="last_name" placeholder="Doe" required>
+                <br>
+                <label for="party_size">Party size</label>
+                <input type="number" id="party_size" name="party_size" min="1" max="5" value="1" required>
+                <br>
+                <label for="date">Approximate Date</label>
+                <input type="date" id="date" name="date" required>
+                <br>
+                <label for="trip_length">Trip Length (days)</label>
+                <input type="number" id="trip_length" name="trip_length" min="7" max="100" value="10" required>
+                <br>
+                <label for="launch_location">Launch Location</label>
+                <br>
+                <input type="radio" id="USA" name="launch_location" value="USA">
+                <label for="USA" id="launch_location">USA</label>
+                <br>
+                <input type="radio" id="RUSSIA" name="launch_location" value="RUSSIA">
+                <label for="RUSSIA">RUSSIA</label>
+                <br>
+                <input type="radio" id="SPAIN" name="launch_location" value="SPAIN">
+                <label for="SPAIN">SPAIN</label>
+                <br>
+                <input type="radio" id="GERMANY" name="launch_location" value="GERMANY">
+                <label for="GERMANY">GERMANY</label>
+                <br>
+                <input type="radio" id="FRANCE" name="launch_location" value="FRANCE">
+                <label for="FRANCE">FRANCE</label>
+                <br>
+                <input type="radio" id="ITALY" name="launch_location" value="ITALY">
+                <label for="ITALY">ITALY</label>
+                <br>
+                <input type="radio" id="INDIA" name="launch_location" value="INDIA">
+                <label for="INDIA">INDIA</label>
+                <br>
+                <input type="radio" id="CHINA" name="launch_location" value="CHINA">
+                <label for="CHINA">CHINA</label>
+                <br>
+                <label for="covid_test">Proof of Covid Screening</label>
+                <input type="file" id="covid_test">
+                <br>
+                <label for="flight_training_cert">Flight Training Certificate</label>
+                <input type="file" id="flight_training_cert">
+                <br>
+                <label for="astro_phys">Astronaut Physical</label>
+                <input type="file" id="astro_phys">
+                <br>
+                <input type="submit">
+
+            </form>
+        </div>
+
+        <div class="hiddenDropdown" id="bookFlightTraining" style="display: none;">
+            
+            <form>
+                <h2>Book a Flight Training</h2>
+                <label for="first_name">First name:</label>
+                <input type="text" id="first_name" name="first_name" placeholder="John" required>
+                <br>
+                <label for="last_name">Last name:</label>
+                <input type="text" id="last_name" name="last_name" placeholder="Doe" required>
+                <br>
+                <label for="party_size">Party size</label>
+                <input type="number" id="party_size" name="party_size" min="1" max="5" value="1" required>
+                <br>
+                <label for="date">Approximate Date</label>
+                <input type="date" id="date" name="date" required>
+                <br>
+                <label for="covid_test">Proof of Covid Screening</label>
+                <input type="file" id="covid_test">
+                <br>
+                <label for="astro_phys">Astronaut Physical</label>
+                <input type="file" id="astro_phys">
+                <br>
+                <input type="submit">
+
+            </form>
+        </div>
+
+
+        <div class="hiddenDropdown" id="bookAstroPhys" style="display: none;">
+            
+            <form>
+                <h2>Book an Astronaut Physical</h2>
+                <label for="first_name">First name:</label>
+                <input type="text" id="first_name" name="first_name" placeholder="John" required>
+                <br>
+                <label for="last_name">Last name:</label>
+                <input type="text" id="last_name" name="last_name" placeholder="Doe" required>
+                <br>
+                <label for="party_size">Party size</label>
+                <input type="number" id="party_size" name="party_size" min="1" max="5" value="1" required>
+                <br>
+                <label for="date">Approximate Date</label>
+                <input type="date" id="date" name="date" required>
+                <br>
+                <label for="covid_test">Proof of Covid Screening</label>
+                <input type="file" id="covid_test">
+                <br>
+                <input type="submit">
+
+            </form>
+        </div>
+        
+
+        <footer onload="setVariables()">
+            <ul>
+                <li>Copyright 2023</li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </footer>
+</body>
+</html>
