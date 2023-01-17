@@ -221,13 +221,13 @@ section {
 }
 
 section:nth-child(odd) {
-  background-color: rgb(166, 57, 28);
+  background-color: #FFF1E7;
 
 
 } 
 
 section:nth-child(even) {
-  background-color: rgb(170, 86, 23);
+  background-color: #FFF1E7;
   
 } 
 
@@ -237,8 +237,6 @@ section:nth-child(even) {
 
 .carousel-cell {
   width: 50%;
-  height: 80vh;
   margin-right: 50px;
-  background: #8C8;
   border-radius: 5px;
 }
