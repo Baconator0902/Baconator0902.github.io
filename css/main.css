@@ -237,13 +237,10 @@ section:nth-child(even) {
 
 .flickity-button {
   margin-right: 0 !important;
-<<<<<<< HEAD
-=======
 }
 
 .carousel-cell {
   width: 50%;
   margin-right: 50px;
   border-radius: 5px;
->>>>>>> 29ac768f41b298f0b67e4582c93b3b4bf148ac94
 }
