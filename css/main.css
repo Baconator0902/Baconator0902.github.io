@@ -9,6 +9,7 @@
     text-align: center;
 }
 
+
 h1, h2 {
   text-transform: uppercase;
 }
@@ -219,21 +220,30 @@ span {
 }
 
 section {
-  background-image: url("/images/LandingPageBackground.svg");
+  display: block;
   min-height: 100vh; 
 }
 
 section:nth-child(odd) {
-  background-color: rgb(166, 57, 28);
+  background-color: #FFF1E7;
 
 
 } 
 
 section:nth-child(even) {
-  background-color: rgb(170, 86, 23);
+  background-color: #FFF1E7;
   
 } 
 
 .flickity-button {
   margin-right: 0 !important;
+<<<<<<< HEAD
+=======
+}
+
+.carousel-cell {
+  width: 50%;
+  margin-right: 50px;
+  border-radius: 5px;
+>>>>>>> 29ac768f41b298f0b67e4582c93b3b4bf148ac94
 }
