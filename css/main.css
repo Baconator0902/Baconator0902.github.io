@@ -9,6 +9,7 @@
     text-align: center;
 }
 
+
 h1, h2 {
   text-transform: uppercase;
 }
@@ -215,7 +216,7 @@ span {
 }
 
 section {
-  background-image: url("/images/LandingPageBackground.svg");
+  display: block;
   min-height: 100vh; 
 }
 
