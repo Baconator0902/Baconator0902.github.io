@@ -4,4 +4,4 @@ views = Blueprint('views', __name__)
 
 @views.route('/')
 def home():
-       webbrowser.open("index.html")
+       return "<p>Sign up</p>"
