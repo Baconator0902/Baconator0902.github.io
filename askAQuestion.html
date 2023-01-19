@@ -58,42 +58,32 @@
 
     <h1>Ask a question</h1>
 
-    <img src="images/home_page_neon_outline.png" id="aboutImage" style="transform: rotate(-90deg);">
-    <img src="images/homepage-04.png" id="aboutImageBackground">
-
-
-    <form action="/feedback" method="post" id="form" style="padding-bottom: 10vh;">
+    <form>
         <p>Name</p> 
-            <input type="text" name="username" id="uName" size="50" placeholder="First Last" required pattern="[A-Z][a-z]+\s[A-Z][a-z]+">
-        <p id="emailText">Email</p> 
-            <input type="email" name="email" id="email" size="30" placeholder="example.email@gmail.com" required pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b">
-        
-        <p>Subject</p>
-            <input type="radio" id="html" name="fav_language" value="HTML">
-            <label for="html">Company</label><br>
-            <input type="radio" id="html" name="fav_language" value="HTML">
-            <label for="html">Personal</label><br>
-            <input type="radio" id="html" name="fav_language" value="HTML">
-            <label for="html">Donation</label><br>
-            <input type="radio" id="html" name="fav_language" value="HTML">
-            <label for="html">Feedback</label><br>
-            <input type="radio" id="html" name="fav_language" value="HTML">
-            <label for="html">Other</label>
-            <br>
-
-        <p>Question</p>
-
-            <input type="text" id="text" name="text" value="-Question here-">
-        
-        
-        
-        <p id="dateText">Date</p> 
-            <input type="date" name="date" id="date" required pattern="\d{2}/d{2}/d{2,4}" placeholder="dd/mm/yyyy">
-        
-            <br>
-
-        <input type="submit" name="submit" style="width: 20vw; height: 10vh; font-size: 1em;">
+        <input type="text" name="username" id="uName" size="50" placeholder="First Last" required pattern="[A-Z][a-z]+\s[A-Z][a-z]+">
+    <p id="emailText">Email</p> 
+        <input type="email" name="email" id="email" size="30" placeholder="example.email@gmail.com" required pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b">
     
+
+    <p>Question</p>
+
+        <input type="text" id="text" name="text" placeholder="-Question here-">
+    
+    
+    
+    <p id="dateText">Date</p> 
+        <input type="date" name="date" id="date" required pattern="\d{2}/d{2}/d{2,4}" placeholder="dd/mm/yyyy">
+    
+        <br>
+
+    <input type="submit" onclick="questionSubmitted()">
     </form>
+
+       <script>
+        function questionSubmitted() {
+            window.alert("Thank you for your question!");
+        }
+       </script>
+    
 </body>
 </html>

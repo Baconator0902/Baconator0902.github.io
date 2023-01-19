@@ -10,13 +10,13 @@ function showAnswer(num) {
     var minusImg = document.getElementById(minusId);
     if (x.style.display == "none" || timesRan[timesRanVar] == 0) {
         x.style.display = 'block';
-        minusImg.style.display = 'block';
+        minusImg.style.display = 'inherit';
         plusImg.style.display = 'none';
         x.animate([{ opacity: "0" },{ opacity: "1" }], {duration: 300});
     } else {
         x.style.display = 'none';
         minusImg.style.display = 'none';
-        plusImg.style.display = 'inline';
+        plusImg.style.display = 'inherit';
     }
     timesRan[timesRanVar]++;
     console.log(timesRan[timesRanVar]);
