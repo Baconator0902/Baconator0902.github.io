@@ -3,9 +3,16 @@ function showBookFlight() {
     bookingDiv = document.getElementById("bookTripDIV");
     trainingDiv = document.getElementById("bookFlightTraining");
     physicalDiv = document.getElementById("bookAstroPhys");
+    bookTripImage = document.getElementById("bookTripImage");
+    bookTrainingImage = document.getElementById("bookTrainingImage");
+    bookPhysicasImage = document.getElementById("bookPhysicasImage");
     bookingDiv.style.display = "block";
     trainingDiv.style.display = "none";
     physicalDiv.style.display = "none";
+
+    bookTripImage.style.display = "block";
+    bookTrainingImage.style.display = "none";
+    bookPhysicasImage.style.display = "none";
 }
 
 //this is a test
@@ -14,19 +21,33 @@ function showTraining() {
     bookingDiv = document.getElementById("bookTripDIV");
     trainingDiv = document.getElementById("bookFlightTraining");
     physicalDiv = document.getElementById("bookAstroPhys");
+    bookTripImage = document.getElementById("bookTripImage");
+    bookTrainingImage = document.getElementById("bookTrainingImage");
+    bookPhysicasImage = document.getElementById("bookPhysicasImage");
 
     bookingDiv.style.display = "none";
     trainingDiv.style.display = "block";
     physicalDiv.style.display = "none";
+
+    bookTripImage.style.display = "none";
+    bookTrainingImage.style.display = "block";
+    bookPhysicasImage.style.display = "none";
 }
 
 function showBookPhysical() {
     bookingDiv = document.getElementById("bookTripDIV");
     trainingDiv = document.getElementById("bookFlightTraining");
     physicalDiv = document.getElementById("bookAstroPhys");
+    bookTripImage = document.getElementById("bookTripImage");
+    bookTrainingImage = document.getElementById("bookTrainingImage");
+    bookPhysicasImage = document.getElementById("bookPhysicasImage");
     bookingDiv.style.display = "none";
     trainingDiv.style.display = "none";
     physicalDiv.style.display = "block";
+
+    bookTripImage.style.display = "none";
+    bookTrainingImage.style.display = "none";
+    bookPhysicasImage.style.display = "block";
 }
 
 function tripBooked() {
