@@ -121,74 +121,78 @@
            </nav>
         </div>
 
-        <div id="tableDiv">
-            <section id="leftImage">
-                <img src="/images/AstronautQuestion.svg">
-                
-                <h3 style="color: rgb(170, 86, 23);;">Question not listed?</h3>
-                <button onclick="askAQuestion()" id="askAQuestion" style="width: 80%; left: 0">Ask a question here</button> 
-            </section>
+        <main>
+            <div id="tableDiv">
+                <section id="leftImage">
+                    <img src="/images/AstronautQuestion.svg">
+                    
+                    <h3 style="color: rgb(170, 86, 23);;">Question not listed?</h3>
+                    <button onclick="askAQuestion()" id="askAQuestion" style="width: 80%; left: 0">Ask a question here</button> 
+                </section>
+    
+                <section id="rightFaqs">
+                    <h1 style="color: rgb(170, 86, 23);;">Frequently Asked Questions</h1>
+    
+            <button onclick="showAnswer('1')">Why does it cost so much to go to space?<img src="/images/Plus.svg" class="plusImg" id="plusImg1"><img src="/images/Minus.png" class="minusImg" id="minusImg1"></button>
+            <div id="div1" class="FRQS"><p>It costs so much to go to space because it costs a lot to maintain our employees, pay for fuel, and adequately prepare our spacecraft.</p></div>
+    
+            <button onclick="showAnswer('2')">What time of year is best to fly?<img src="/images/Plus.svg" class="plusImg" id="plusImg2"><img src="/images/Minus.png" class="minusImg" id="minusImg2"></button>
+            <div id="div2" class="FRQS"><p>We would personally recommend winter, as that is when the most days are available, and daily flight rates are cheapest.</p>
+            </div>
+    
+            <button onclick="showAnswer('3')">If I live in the United States can I fly out of Canada or England (and vice versa)?<img src="/images/Plus.svg" class="plusImg" id="plusImg3"><img src="/images/Minus.png" class="minusImg" id="minusImg3"></button>
+            <div id="div3" class="FRQS"><p>Yes, because part of our traveling requirements is a passport, you will be able to fly out of any location you would like to choose. While we would recommend the closest location to where you live, if you would like to fly out of another country, it is wholly up to you.</p>
+            </div>
+    
+            <button onclick="showAnswer('4')">Is it better to fly alone or with a chaperone?<img src="/images/Plus.svg" class="plusImg" id="plusImg4"><img src="/images/Minus.png" class="minusImg" id="minusImg4">
+            </button>
+            <div id="div4" class="FRQS"><p>The less experience you have, the better our chaperones become. Our chaperones are trained to be there purely to assist with anything you may need aboard the craft, and will not interfere with anything that you want to do in space, unless it becomes a danger to yourself or them. </p>
+            </div>
+    
+            <button onclick="showAnswer('5')">How hard is it to meet all of the requirements?<img src="/images/Plus.svg" class="plusImg" id="plusImg5"><img src="/images/Minus.png" class="minusImg" id="minusImg5">
+    
+            </button>
+            <div id="div5" class="FRQS"><p>It isn’t! We provide plenty of resources and options to enable you to meet all of our travel requirements to have you taking flight as soon as possible!</p>
+            </div>
+    
+            <button onclick="showAnswer('6')">Is it really worth the cost?<img src="/images/Plus.svg" class="plusImg" id="plusImg6"><img src="/images/Minus.png" class="minusImg" id="minusImg6">
+    
+            </button>
+            <div id="div6" class="FRQS"><p>Yes! So many of our customers wish they could go right back up after completing a trip! Outside of the fun of the trip too, you gain valuable astronaut experience when traveling with us!</p>
+            </div>
+            
+            <button onclick="showAnswer('7')">I want to travel with 3 of my friends, but none of us have experience flying with you. Will it still be safe without a chaperone?<img src="/images/Plus.svg" class="plusImg" id="plusImg7"><img src="/images/Minus.png" class="minusImg" id="minusImg7">
+    
+            </button>
+            <div id="div7" class="FRQS"><p>Absolutely! Flying with a chaperone is only a recommendation, and to fly without one, you have to meet certain minimum training requirements that ensure you will be safe without!</p>
+            </div>
+    
+            <button onclick="showAnswer('8')">Can I fly out of England at the same time as someone flying out of the United States?<img src="/images/Plus.svg" class="plusImg" id="plusImg8"><img src="/images/Minus.png" class="minusImg" id="minusImg8">
+    
+            </button>
+            <div id="div8" class="FRQS"><p>No, logistically you can’t. You can leave the day after, or two days after, but we like to make sure that we do not have 2 trips leaving on the same day, in the event of some emergency with one.</p>
+            </div>
+    
+            <button onclick="showAnswer('9')">Why is your refund policy always unlimited?<img src="/images/Plus.svg" class="plusImg" id="plusImg9"><img src="/images/Minus.png" class="minusImg" id="minusImg9">
+    
+            </button>
+            <div id="div9" class="FRQS"><p>If we don’t end up launching the spaceship, that occurs at no extra cost to us. We didn’t have to pay a chaperone, or pay for launch. Additionally, because we have three locations, we are able to sustain if only 1, or even 2 of the locations have a canceled trip at the same time!</p>
+            </div>
+    
+            <button onclick="showAnswer('10')">Can I reduce the cost of my trip?<img src="/images/Plus.svg" class="plusImg" id="plusImg10"><img src="/images/Minus.png" class="minusImg" id="minusImg10">
+    
+            </button>
+            <div id="div10" class="FRQS"><p>As time passes, space travel and astronaut training will become less and less expensive. Unfortunately, at the moment, the only way for us to sustain sending people to space is at this cost.</p>
+            </div>
+    
+                </section>
+            </div>
+    
+            
+    
+        </main>
 
-            <section id="rightFaqs">
-                <h1 style="color: rgb(170, 86, 23);;">Frequently Asked Questions</h1>
-
-        <button onclick="showAnswer('1')">Why does it cost so much to go to space?<img src="/images/Plus.svg" class="plusImg" id="plusImg1"><img src="/images/Minus.png" class="minusImg" id="minusImg1"></button>
-        <div id="div1" class="FRQS"><p>It costs so much to go to space because it costs a lot to maintain our employees, pay for fuel, and adequately prepare our spacecraft.</p></div>
-
-        <button onclick="showAnswer('2')">What time of year is best to fly?<img src="/images/Plus.svg" class="plusImg" id="plusImg2"><img src="/images/Minus.png" class="minusImg" id="minusImg2"></button>
-        <div id="div2" class="FRQS"><p>We would personally recommend winter, as that is when the most days are available, and daily flight rates are cheapest.</p>
-        </div>
-
-        <button onclick="showAnswer('3')">If I live in the United States can I fly out of Canada or England (and vice versa)?<img src="/images/Plus.svg" class="plusImg" id="plusImg3"><img src="/images/Minus.png" class="minusImg" id="minusImg3"></button>
-        <div id="div3" class="FRQS"><p>Yes, because part of our traveling requirements is a passport, you will be able to fly out of any location you would like to choose. While we would recommend the closest location to where you live, if you would like to fly out of another country, it is wholly up to you.</p>
-        </div>
-
-        <button onclick="showAnswer('4')">Is it better to fly alone or with a chaperone?<img src="/images/Plus.svg" class="plusImg" id="plusImg4"><img src="/images/Minus.png" class="minusImg" id="minusImg4">
-        </button>
-        <div id="div4" class="FRQS"><p>The less experience you have, the better our chaperones become. Our chaperones are trained to be there purely to assist with anything you may need aboard the craft, and will not interfere with anything that you want to do in space, unless it becomes a danger to yourself or them. </p>
-        </div>
-
-        <button onclick="showAnswer('5')">How hard is it to meet all of the requirements?<img src="/images/Plus.svg" class="plusImg" id="plusImg5"><img src="/images/Minus.png" class="minusImg" id="minusImg5">
-
-        </button>
-        <div id="div5" class="FRQS"><p>It isn’t! We provide plenty of resources and options to enable you to meet all of our travel requirements to have you taking flight as soon as possible!</p>
-        </div>
-
-        <button onclick="showAnswer('6')">Is it really worth the cost?<img src="/images/Plus.svg" class="plusImg" id="plusImg6"><img src="/images/Minus.png" class="minusImg" id="minusImg6">
-
-        </button>
-        <div id="div6" class="FRQS"><p>Yes! So many of our customers wish they could go right back up after completing a trip! Outside of the fun of the trip too, you gain valuable astronaut experience when traveling with us!</p>
-        </div>
         
-        <button onclick="showAnswer('7')">I want to travel with 3 of my friends, but none of us have experience flying with you. Will it still be safe without a chaperone?<img src="/images/Plus.svg" class="plusImg" id="plusImg7"><img src="/images/Minus.png" class="minusImg" id="minusImg7">
-
-        </button>
-        <div id="div7" class="FRQS"><p>Absolutely! Flying with a chaperone is only a recommendation, and to fly without one, you have to meet certain minimum training requirements that ensure you will be safe without!</p>
-        </div>
-
-        <button onclick="showAnswer('8')">Can I fly out of England at the same time as someone flying out of the United States?<img src="/images/Plus.svg" class="plusImg" id="plusImg8"><img src="/images/Minus.png" class="minusImg" id="minusImg8">
-
-        </button>
-        <div id="div8" class="FRQS"><p>No, logistically you can’t. You can leave the day after, or two days after, but we like to make sure that we do not have 2 trips leaving on the same day, in the event of some emergency with one.</p>
-        </div>
-
-        <button onclick="showAnswer('9')">Why is your refund policy always unlimited?<img src="/images/Plus.svg" class="plusImg" id="plusImg9"><img src="/images/Minus.png" class="minusImg" id="minusImg9">
-
-        </button>
-        <div id="div9" class="FRQS"><p>If we don’t end up launching the spaceship, that occurs at no extra cost to us. We didn’t have to pay a chaperone, or pay for launch. Additionally, because we have three locations, we are able to sustain if only 1, or even 2 of the locations have a canceled trip at the same time!</p>
-        </div>
-
-        <button onclick="showAnswer('10')">Can I reduce the cost of my trip?<img src="/images/Plus.svg" class="plusImg" id="plusImg10"><img src="/images/Minus.png" class="minusImg" id="minusImg10">
-
-        </button>
-        <div id="div10" class="FRQS"><p>As time passes, space travel and astronaut training will become less and less expensive. Unfortunately, at the moment, the only way for us to sustain sending people to space is at this cost.</p>
-        </div>
-
-            </section>
-        </div>
-
-        
-
 
     <footer>
         <ul>

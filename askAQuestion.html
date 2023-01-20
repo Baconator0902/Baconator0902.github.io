@@ -56,29 +56,33 @@
            </nav>
         </div>
 
-    <h1>Ask a question</h1>
+        <main>
+            <h1>Ask a question</h1>
 
-    <form>
-        <p>Name</p> 
-        <input type="text" name="username" id="uName" size="50" placeholder="First Last" required pattern="[A-Z][a-z]+\s[A-Z][a-z]+">
-    <p id="emailText">Email</p> 
-        <input type="email" name="email" id="email" size="30" placeholder="example.email@gmail.com" required pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b">
-    
+            <form>
+                <p>Name</p> 
+                <input type="text" name="username" id="uName" size="50" placeholder="First Last" required pattern="[A-Z][a-z]+\s[A-Z][a-z]+">
+            <p id="emailText">Email</p> 
+                <input type="email" name="email" id="email" size="30" placeholder="example.email@gmail.com" required pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b">
+            
+        
+            <p>Question</p>
+        
+                <input type="text" id="text" name="text" placeholder="-Question here-">
+            
+            
+            
+            <p id="dateText">Date</p> 
+                <input type="date" name="date" id="date" required pattern="\d{2}/d{2}/d{2,4}" placeholder="dd/mm/yyyy">
+            
+                <br>
+        
+            <input type="submit" onclick="questionSubmitted()">
+            </form>
+        
+        </main>
 
-    <p>Question</p>
-
-        <input type="text" id="text" name="text" placeholder="-Question here-">
     
-    
-    
-    <p id="dateText">Date</p> 
-        <input type="date" name="date" id="date" required pattern="\d{2}/d{2}/d{2,4}" placeholder="dd/mm/yyyy">
-    
-        <br>
-
-    <input type="submit" onclick="questionSubmitted()">
-    </form>
-
        <script>
         function questionSubmitted() {
             window.alert("Thank you for your question!");

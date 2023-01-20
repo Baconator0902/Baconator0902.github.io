@@ -95,143 +95,147 @@
            </nav>
         </div>
 
-        <section>
+        <main>
+            <section>
 
-            <div id="buttonsDropDowns">
-                <button type="button" onclick="showBookFlight()">
-                    Book a Trip
-                </button>
-                <button type="button" onclick="showTraining()">
-                    Book a Flight Training
-                </button>
-                <button type="button" onclick="showBookPhysical()">
-                    Book an Astronaut Physical 
-                </button>
-            </div>
-    
-            <div id="bookGrid">
-                
-                    <img src="/images/BookaTripGraphic.svg" style="width: 40vw; height: auto; grid-column: 1; display: block; margin-left: auto; margin-right: auto; padding-top: 10vh" id="bookTripImage">
-                    <img src="/images/BookTestFlight.svg" style="width: 40vw; height: auto; grid-column: 1; display: block; margin-left: auto; margin-right: auto; padding-top: 10vh; display: none;" id="bookTrainingImage">
-                    <img src="/images/BookastronautPhysicalgraphic.svg" style="width: 40vw; height: auto; grid-column: 1; display: block; margin-left: auto; margin-right: auto; padding-top: 10vh; display: none;" id="bookPhysicasImage">
-                
-    
-                <div class="hiddenDropdown" id="bookTripDIV" style="grid-column: 2;">
-                
-                    <form>
-                        <h2>Book a Trip</h2>
-                        <label for="first_name">First name:</label>
-                        <input type="text" id="first_name" name="first_name" placeholder="John" required pattern="[A-Z][a-z]*">
-                        <br>
-                        <label for="last_name">Last name:</label>
-                        <input type="text" id="last_name" name="last_name" placeholder="Doe" required pattern="[A-Z][a-z]*">
-                        <br>
-                        <label for="email" id="emailText">Email</label> 
-                        <input type="email" name="email" id="email" size="30" placeholder="example.email@gmail.com" required pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b">
-                        <br>
-                        <label for="party_size">Party size</label>
-                        <input type="number" id="party_size" name="party_size" min="1" max="5" value="1" required>
-                        <br>
-                        <label for="date">Approximate Date</label>
-                        <input type="date" id="date" name="date" required>
-                        <br>
-                        <label for="trip_length">Trip Length (days)</label>
-                        <input type="number" id="trip_length" name="trip_length" min="4" max="100" value="10" required>
-                        <br>
-                        <label for="launch_location" style="display: block;">Launch Location</label>
-                        <br>
-                        <input type="radio" id="USA" name="launch_location" value="USA">
-                        <label for="USA" id="launch_location" class="countryLabel">USA</label>
-                        <br>
-                        <input type="radio" id="RUSSIA" name="launch_location" value="RUSSIA">
-                        <label for="RUSSIA" class="countryLabel">RUSSIA</label>
-                        <br>
-                        <input type="radio" id="SPAIN" name="launch_location" value="SPAIN">
-                        <label for="SPAIN" class="countryLabel">SPAIN</label>
-                        <br>
-                        <input type="radio" id="GERMANY" name="launch_location" value="GERMANY">
-                        <label for="GERMANY" class="countryLabel">GERMANY</label>
-                        <br>
-                        <input type="radio" id="FRANCE" name="launch_location" value="FRANCE">
-                        <label for="FRANCE" class="countryLabel">FRANCE</label>
-                        <br>
-                        <input type="radio" id="ITALY" name="launch_location" value="ITALY">
-                        <label for="ITALY" class="countryLabel">ITALY</label>
-                        <br>
-                        <input type="radio" id="INDIA" name="launch_location" value="INDIA">
-                        <label for="INDIA" class="countryLabel">INDIA</label>
-                        <br>
-                        <input type="radio" id="CHINA" name="launch_location" value="CHINA">
-                        <label for="CHINA" class="countryLabel">CHINA</label>
-                        <br>
-                        <label for="covid_test">Proof of Covid Screening</label>
-                        <input type="file" id="covid_test">
-                        <br>
-                        <label for="flight_training_cert">Flight Training Certificate</label>
-                        <input type="file" id="flight_training_cert">
-                        <br>
-                        <label for="astro_phys">Astronaut Physical</label>
-                        <input type="file" id="astro_phys">
-                        <br>
-                        <input type="submit" onclick="tripBooked()">
-        
-                    </form>
+                <div id="buttonsDropDowns">
+                    <button type="button" onclick="showBookFlight()">
+                        Book a Trip
+                    </button>
+                    <button type="button" onclick="showTraining()">
+                        Book a Flight Training
+                    </button>
+                    <button type="button" onclick="showBookPhysical()">
+                        Book an Astronaut Physical 
+                    </button>
                 </div>
         
-                <div class="hiddenDropdown" id="bookFlightTraining" style="display: none; grid-column: 2;">
+                <div id="bookGrid">
                     
-                    <form>
-                        <h2>Book a Flight Training</h2>
-                        <label for="first_name">First name:</label>
-                        <input type="text" id="first_name" name="first_name" placeholder="John" required pattern="[A-Z][a-z]*">
-                        <br>
-                        <label for="last_name">Last name:</label>
-                        <input type="text" id="last_name" name="last_name" placeholder="Doe" required pattern="[A-Z][a-z]*">
-                        <br>
-                        <label for="party_size">Party size</label>
-                        <input type="number" id="party_size" name="party_size" min="1" max="5" value="1" required>
-                        <br>
-                        <label for="date">Approximate Date</label>
-                        <input type="date" id="date" name="date" required>
-                        <br>
-                        <label for="covid_test">Proof of Covid Screening</label>
-                        <input type="file" id="covid_test">
-                        <br>
-                        <label for="astro_phys">Astronaut Physical</label>
-                        <input type="file" id="astro_phys">
-                        <br>
-                        <input type="submit" onclick="trainingSubmitted()">
-        
-                    </form>
-                </div>
-        
-        
-                <div class="hiddenDropdown" id="bookAstroPhys" style="display: none; grid-column: 2;">
+                        <img src="/images/BookaTripGraphic.svg" style="width: 40vw; height: auto; grid-column: 1; display: block; margin-left: auto; margin-right: auto; padding-top: 10vh" id="bookTripImage">
+                        <img src="/images/BookTestFlight.svg" style="width: 40vw; height: auto; grid-column: 1; display: block; margin-left: auto; margin-right: auto; padding-top: 10vh; display: none;" id="bookTrainingImage">
+                        <img src="/images/BookastronautPhysicalgraphic.svg" style="width: 40vw; height: auto; grid-column: 1; display: block; margin-left: auto; margin-right: auto; padding-top: 10vh; display: none;" id="bookPhysicasImage">
                     
-                    <form>
-                        <h2>Book an Astronaut Physical</h2>
-                        <label for="first_name">First name:</label>
-                        <input type="text" id="first_name" name="first_name" placeholder="John" required pattern="[A-Z][a-z]*">
-                        <br>
-                        <label for="last_name">Last name:</label>
-                        <input type="text" id="last_name" name="last_name" placeholder="Doe" required pattern="[A-Z][a-z]*">
-                        <br>
-                        <label for="party_size">Party size</label>
-                        <input type="number" id="party_size" name="party_size" min="1" max="5" value="1" required>
-                        <br>
-                        <label for="date">Approximate Date</label>
-                        <input type="date" id="date" name="date" required>
-                        <br>
-                        <label for="covid_test">Proof of Covid Screening</label>
-                        <input type="file" id="covid_test">
-                        <br>
-                        <input type="submit" onclick="physicalSubmitted()">
         
-                    </form>
+                    <div class="hiddenDropdown" id="bookTripDIV" style="grid-column: 2;">
+                    
+                        <form>
+                            <h2>Book a Trip</h2>
+                            <label for="first_name">First name:</label>
+                            <input type="text" id="first_name" name="first_name" placeholder="John" required pattern="[A-Z][a-z]*">
+                            <br>
+                            <label for="last_name">Last name:</label>
+                            <input type="text" id="last_name" name="last_name" placeholder="Doe" required pattern="[A-Z][a-z]*">
+                            <br>
+                            <label for="email" id="emailText">Email</label> 
+                            <input type="email" name="email" id="email" size="30" placeholder="example.email@gmail.com" required pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b">
+                            <br>
+                            <label for="party_size">Party size</label>
+                            <input type="number" id="party_size" name="party_size" min="1" max="5" value="1" required>
+                            <br>
+                            <label for="date">Approximate Date</label>
+                            <input type="date" id="date" name="date" required>
+                            <br>
+                            <label for="trip_length">Trip Length (days)</label>
+                            <input type="number" id="trip_length" name="trip_length" min="4" max="100" value="10" required>
+                            <br>
+                            <label for="launch_location" style="display: block;">Launch Location</label>
+                            <br>
+                            <input type="radio" id="USA" name="launch_location" value="USA">
+                            <label for="USA" id="launch_location" class="countryLabel">USA</label>
+                            <br>
+                            <input type="radio" id="RUSSIA" name="launch_location" value="RUSSIA">
+                            <label for="RUSSIA" class="countryLabel">RUSSIA</label>
+                            <br>
+                            <input type="radio" id="SPAIN" name="launch_location" value="SPAIN">
+                            <label for="SPAIN" class="countryLabel">SPAIN</label>
+                            <br>
+                            <input type="radio" id="GERMANY" name="launch_location" value="GERMANY">
+                            <label for="GERMANY" class="countryLabel">GERMANY</label>
+                            <br>
+                            <input type="radio" id="FRANCE" name="launch_location" value="FRANCE">
+                            <label for="FRANCE" class="countryLabel">FRANCE</label>
+                            <br>
+                            <input type="radio" id="ITALY" name="launch_location" value="ITALY">
+                            <label for="ITALY" class="countryLabel">ITALY</label>
+                            <br>
+                            <input type="radio" id="INDIA" name="launch_location" value="INDIA">
+                            <label for="INDIA" class="countryLabel">INDIA</label>
+                            <br>
+                            <input type="radio" id="CHINA" name="launch_location" value="CHINA">
+                            <label for="CHINA" class="countryLabel">CHINA</label>
+                            <br>
+                            <label for="covid_test">Proof of Covid Screening</label>
+                            <input type="file" id="covid_test">
+                            <br>
+                            <label for="flight_training_cert">Flight Training Certificate</label>
+                            <input type="file" id="flight_training_cert">
+                            <br>
+                            <label for="astro_phys">Astronaut Physical</label>
+                            <input type="file" id="astro_phys">
+                            <br>
+                            <input type="submit" onclick="tripBooked()">
+            
+                        </form>
+                    </div>
+            
+                    <div class="hiddenDropdown" id="bookFlightTraining" style="display: none; grid-column: 2;">
+                        
+                        <form>
+                            <h2>Book a Flight Training</h2>
+                            <label for="first_name">First name:</label>
+                            <input type="text" id="first_name" name="first_name" placeholder="John" required pattern="[A-Z][a-z]*">
+                            <br>
+                            <label for="last_name">Last name:</label>
+                            <input type="text" id="last_name" name="last_name" placeholder="Doe" required pattern="[A-Z][a-z]*">
+                            <br>
+                            <label for="party_size">Party size</label>
+                            <input type="number" id="party_size" name="party_size" min="1" max="5" value="1" required>
+                            <br>
+                            <label for="date">Approximate Date</label>
+                            <input type="date" id="date" name="date" required>
+                            <br>
+                            <label for="covid_test">Proof of Covid Screening</label>
+                            <input type="file" id="covid_test">
+                            <br>
+                            <label for="astro_phys">Astronaut Physical</label>
+                            <input type="file" id="astro_phys">
+                            <br>
+                            <input type="submit" onclick="trainingSubmitted()">
+            
+                        </form>
+                    </div>
+            
+            
+                    <div class="hiddenDropdown" id="bookAstroPhys" style="display: none; grid-column: 2;">
+                        
+                        <form>
+                            <h2>Book an Astronaut Physical</h2>
+                            <label for="first_name">First name:</label>
+                            <input type="text" id="first_name" name="first_name" placeholder="John" required pattern="[A-Z][a-z]*">
+                            <br>
+                            <label for="last_name">Last name:</label>
+                            <input type="text" id="last_name" name="last_name" placeholder="Doe" required pattern="[A-Z][a-z]*">
+                            <br>
+                            <label for="party_size">Party size</label>
+                            <input type="number" id="party_size" name="party_size" min="1" max="5" value="1" required>
+                            <br>
+                            <label for="date">Approximate Date</label>
+                            <input type="date" id="date" name="date" required>
+                            <br>
+                            <label for="covid_test">Proof of Covid Screening</label>
+                            <input type="file" id="covid_test">
+                            <br>
+                            <input type="submit" onclick="physicalSubmitted()">
+            
+                        </form>
+                    </div>
                 </div>
-            </div>
-    
-        </section>
+        
+            </section>
+        </main>
+
+        
 
         
         <footer onload="setVariables()">
