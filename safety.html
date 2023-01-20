@@ -30,12 +30,20 @@
         }
 
         #chooseFiveDiv > img {
-            width: 15vw;
+            width: 15vw !important;
             height: auto;
         }
-
+        @media only screen and (max-width: 1200px) {
+            #threeSystems {
+                display: block;
+            }
+          }
+          @media only screen and (min-width: 1200px) {
+            #threeSystems {
+                display: grid;
+            }
+          }
         #threeSystems {
-            display: grid;
             height: 150vh;
             grid-template-columns: 40vw 50vw;
             grid-template-rows: 50vh 50vh 50vh;
@@ -45,9 +53,17 @@
         #threeSystems > img {
             height: 40vh;
         }
-
+        @media only screen and (max-width: 1200px) {
+            #bottomTable {
+                display: block;
+            }
+          }
+          @media only screen and (min-width: 1200px) {
+            #bottomTable {
+                display: grid;
+            }
+          }
         #bottomTable {
-            display: grid;
             height: 200vh;
             grid-template-columns: 40vw 60vw;
             grid-template-rows: 75vh 75vh 75vh 75vh;

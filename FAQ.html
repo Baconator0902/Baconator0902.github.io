@@ -21,6 +21,22 @@
             font-family: 'Teko', sans-serif;
         }
 
+        
+        @media only screen and (max-width: 1200px) {
+            #tableDiv {
+                display: block;
+            }
+          }
+          @media only screen and (min-width: 1200px) {
+            #tableDiv {
+                display: grid;
+                grid-template-columns: 50vw 50vw;
+            }
+          }
+
+
+        
+
         body, #leftImage, #rightFaqs {
             background-image: none;
             background-color: #FFF1E7;
@@ -52,10 +68,7 @@
             z-index: 20;
         }
 
-        #tableDiv {
-            display: grid;
-            grid-template-columns: 50vw 50vw;
-        }
+        
 
         #leftImage {
             grid-column: 1;

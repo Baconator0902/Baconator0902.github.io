@@ -49,9 +49,19 @@
             padding-left: 20px;
           }
 
+          @media only screen and (max-width: 1200px) {
+            #topHead {
+                display: block;
+            }
+          }
+          @media only screen and (min-width: 1200px) {
+            #topHead {
+                display: grid;
+            }
+          }
+
         #topHead {
             background-image: url("/images/LandingPageBackground.svg");
-            display: grid;
             grid-template-columns:  50vw, 50vw;
             grid-template-rows: 1fr;
         }
@@ -60,16 +70,34 @@
             color: white;
         }
 
+        @media only screen and (max-width: 1200px) {
+            #leftTable {
+                display: block;
+            }
+          }
+          @media only screen and (min-width: 1200px) {
+            #leftTable {
+                display: grid;
+            }
+          }
+          @media only screen and (max-width: 1200px) {
+            #rightTable {
+                display: block;
+            }
+          }
+          @media only screen and (min-width: 1200px) {
+            #rightTable {
+                display: grid;
+            }
+          }
         #leftTable {
             grid-column: 1;
-            display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 20% 40% 40%;
         }
 
         #rightTable {
             grid-column: 2;
-            display: grid;
             width: 50vw;
             grid-template-columns: 1fr, 1fr, 1fr;
             grid-template-rows: 1fr, 1fr, 1fr, 1fr;
@@ -111,9 +139,18 @@
             grid-row-start: 3;
             grid-row-end: 3;
         }
-
+        
+        @media only screen and (max-width: 1200px) {
+            #places {
+                display: block;
+            }
+          }
+          @media only screen and (min-width: 1200px) {
+            #places {
+                display: grid;
+            }
+          }
         #places {
-            display: grid;
             grid-template-columns: 50% 50%;
         }
 
@@ -146,6 +183,24 @@
           section a {
             color: blue;
           }
+
+          @media only screen and (max-width: 1200px) {
+            #highlights {
+                display: block;
+            }
+          }
+          @media only screen and (min-width: 1200px) {
+            #highlights {
+                display: grid;
+            }
+          }
+
+          #highlights {
+            grid-template-columns: 50vw 50vw;
+            grid-template-rows: 10vh 35vh 35vh 35vh;
+            padding-bottom: 10vh;
+          }
+
     </style>
 </head>
 <body>
@@ -231,24 +286,33 @@
         </div>
     </section>
     <section>
-        <h2>Highlights</h2>
-            <ul id="highlightsUl">
-                <li>
-                    <h4>Spacewalk</h4>
-                    <p>This activity is perhaps the most famous astronaut activity of them all, and is featured on the majority of our trips. It involves wearing a spacesuit and venturing out of the ship while remaining attached via a return cord. 
-                    </p>
-                </li>
-                <li>
-                    <h4>Tour of the ISS</h4>
-                    <p>This activity is one of the more uncommon ones, unless expressly included in the trip planning or pricing (namely on trips like the ISS express) and is perhaps the most interesting of the space activities. Participants get the opportunity to experience life aboard the ISS, and meet other astronauts and see their onboard research, barring classification.
-                    </p>
-                </li>
-                <li>
-                    <h4>The View</h4>
-                    <p>Potentially the most incredible part of any of these trips is just the ability to see Earth from outer space, take some amazing pictures and make some amazing memories. While it obviously can’t be instagrammed in space, it sure can be upon return!
-                    </p>
-                </li>
-            </ul>
+        <div id="highlights">
+            <h2 style="grid-column: 1 / 2; grid-row: 1;">Highlights</h2>
+
+            <div style="grid-column: 1; grid-row: 2;">
+                <h4>Spacewalk</h4>
+                <p>This activity is perhaps the most famous astronaut activity of them all, and is featured on the majority of our trips. It involves wearing a spacesuit and venturing out of the ship while remaining attached via a return cord. 
+                </p>
+            </div>
+           
+            <img src="/images/AstronautandRocket.svg" style="grid-column: 2; grid-row: 2; height: 25vh;">
+
+            <div style="grid-column: 1; grid-row: 3;">
+                <h4>Tour of the ISS</h4>
+                <p>This activity is one of the more uncommon ones, unless expressly included in the trip planning or pricing (namely on trips like the ISS express) and is perhaps the most interesting of the space activities. Participants get the opportunity to experience life aboard the ISS, and meet other astronauts and see their onboard research, barring classification.
+                </p>
+            </div>
+            
+            <img src="/images/ISSExpresswithText.svg" style="grid-column: 2; grid-row: 3; height: 25vh;">
+
+            <div style="grid-column: 1; grid-row: 4;">
+                <h4>The View</h4>
+                <p>Potentially the most incredible part of any of these trips is just the ability to see Earth from outer space, take some amazing pictures and make some amazing memories. While it obviously can’t be instagrammed in space, it sure can be upon return!</p>
+                
+            </div>
+            <img src="/images/TestFlightGraphic.svg" style="grid-column: 2; grid-row: 4; height: 25vh;">
+        </div>
+         
     </section>
     <section style="min-height: 30vh; height: 50vh;">
         <h2>Why us?</h2>

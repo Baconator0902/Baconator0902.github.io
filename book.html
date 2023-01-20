@@ -18,6 +18,7 @@
             font-family: 'Teko', sans-serif;
         }
         
+        
         #buttonsDropDowns {
             display: flex;
             justify-content: space-around;
@@ -42,10 +43,23 @@
             color: rgb(170, 86, 23);
         }
 
-        #bookGrid {
-            display: grid;
-            grid-template-columns: 50vw 50vw;
-        }
+        @media only screen and (max-width: 1200px) {
+            #bookGrid {
+                display: block;
+            }
+
+            button {
+                height: 15vh;
+                width: 30vw;
+            }
+          }
+          @media only screen and (min-width: 1200px) {
+            #bookGrid {
+                display: grid;
+                grid-template-columns: 50vw 50vw;
+            }
+          }
+        
 
         .countryLabel {
             padding: 0;
@@ -105,10 +119,10 @@
                     <form>
                         <h2>Book a Trip</h2>
                         <label for="first_name">First name:</label>
-                        <input type="text" id="first_name" name="first_name" placeholder="John" required>
+                        <input type="text" id="first_name" name="first_name" placeholder="John" required pattern="[A-Z][a-z]*">
                         <br>
                         <label for="last_name">Last name:</label>
-                        <input type="text" id="last_name" name="last_name" placeholder="Doe" required>
+                        <input type="text" id="last_name" name="last_name" placeholder="Doe" required pattern="[A-Z][a-z]*">
                         <br>
                         <label for="email" id="emailText">Email</label> 
                         <input type="email" name="email" id="email" size="30" placeholder="example.email@gmail.com" required pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b">
@@ -167,10 +181,10 @@
                     <form>
                         <h2>Book a Flight Training</h2>
                         <label for="first_name">First name:</label>
-                        <input type="text" id="first_name" name="first_name" placeholder="John" required>
+                        <input type="text" id="first_name" name="first_name" placeholder="John" required pattern="[A-Z][a-z]*">
                         <br>
                         <label for="last_name">Last name:</label>
-                        <input type="text" id="last_name" name="last_name" placeholder="Doe" required>
+                        <input type="text" id="last_name" name="last_name" placeholder="Doe" required pattern="[A-Z][a-z]*">
                         <br>
                         <label for="party_size">Party size</label>
                         <input type="number" id="party_size" name="party_size" min="1" max="5" value="1" required>
@@ -195,10 +209,10 @@
                     <form>
                         <h2>Book an Astronaut Physical</h2>
                         <label for="first_name">First name:</label>
-                        <input type="text" id="first_name" name="first_name" placeholder="John" required>
+                        <input type="text" id="first_name" name="first_name" placeholder="John" required pattern="[A-Z][a-z]*">
                         <br>
                         <label for="last_name">Last name:</label>
-                        <input type="text" id="last_name" name="last_name" placeholder="Doe" required>
+                        <input type="text" id="last_name" name="last_name" placeholder="Doe" required pattern="[A-Z][a-z]*">
                         <br>
                         <label for="party_size">Party size</label>
                         <input type="number" id="party_size" name="party_size" min="1" max="5" value="1" required>
