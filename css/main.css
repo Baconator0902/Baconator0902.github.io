@@ -75,7 +75,13 @@ nav > ul > img:hover {
 nav > ul {
     display: grid;
     height: 100%;
-    grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 25vw 15vw 15vw 15vw 15vw 15vw;
+}
+
+nav * {
+  
+  margin: 0;
+  padding: 0;
 }
 
 nav > * {
@@ -91,6 +97,7 @@ nav > * {
 }
 
 footer {
+  height: 20vh;
   background-image: url("/images/LandingPageBackground.svg");
 }
 
@@ -115,6 +122,10 @@ footer > * {
   font-size: x-large;
 }
 
+footer * {
+  color: #EFE8CC;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -136,8 +147,8 @@ ul {
   }
   
   li a:hover {
-    color: blue;
-    background-color: #EFE8CC;
+    font-weight: bold;
+    font-size: 120%;
   }
 
   nav > ul > li {
@@ -226,13 +237,10 @@ section {
 
 section:nth-child(odd) {
   background-color: #FFF1E7;
-
-
 } 
 
 section:nth-child(even) {
   background-color: #FFF1E7;
-  
 } 
 
 .flickity-button {

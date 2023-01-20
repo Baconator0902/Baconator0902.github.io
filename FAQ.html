@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/phone.css">
+    <link rel="stylesheet" media="screen and (min-width: 1200px)" href="css/main.css">
+    <script src="js/navbar.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet"> 
-    <script src="js/navbar.js"></script>
+    
     <script src="js/footer.js"></script>
     <script src="js/faqs.js"></script>
     <title>FAQ</title>
@@ -35,8 +37,11 @@
 
         .FRQS {
             display: none;
-            width: 50%;
-            margin-left: 25%;
+            width: 100%;
+        }
+
+        .FRQS p {
+            padding-right: 5vw;
         }
     
         #aboutImage:hover, #FAQArrows:hover {
@@ -82,12 +87,10 @@
         
         <nav id="navBar">
             <ul>
-                <img src="/images/TotheStarsHomeLogo.svg" style="height: 75%; padding: 0; top: 0;">
+                <img src="/images/TotheStarsHomeLogo.svg" style="height: 10vh; padding: 0; top: 0; cursor: pointer;" onclick="MovetoIndex()">
+                    
                 <li>
-                    <a href="index.html">Landing</a>
-                </li>
-                <li>
-                    <a href="info.html">Info</a>
+                    <a href="info.html">Travel Requirements</a>
                 </li>
                 <li>
                     <a href="book.html">Book</a>
@@ -108,6 +111,9 @@
         <div id="tableDiv">
             <section id="leftImage">
                 <img src="/images/AstronautQuestion.svg">
+                
+                <h3 style="color: rgb(170, 86, 23);;">Question not listed?</h3>
+                <button onclick="askAQuestion()" id="askAQuestion" style="width: 80%; left: 0">Ask a question here</button> 
             </section>
 
             <section id="rightFaqs">
@@ -165,8 +171,6 @@
         <div id="div10" class="FRQS"><p>As time passes, space travel and astronaut training will become less and less expensive. Unfortunately, at the moment, the only way for us to sustain sending people to space is at this cost.</p>
         </div>
 
-        <h3 style="color: rgb(170, 86, 23);;">Question not listed?</h3>
-        <button onclick="askAQuestion()" id="askAQuestion" style="width: 100%; left: 0">Ask a question here</button> 
             </section>
         </div>
 

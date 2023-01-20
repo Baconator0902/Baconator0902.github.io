@@ -12,3 +12,7 @@ function  hideNav(id) {
     container = document.getElementById("hiddenNav-" + id);
     container.style.display = "none";
 }
+
+function MovetoIndex() {
+    window.location = "index.html";
+}

@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/phone.css">
+    <link rel="stylesheet" media="screen and (min-width: 1200px)" href="css/main.css">
+    <script src="js/navbar.js"></script>
+    <script src="js/home.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet"> 
@@ -12,7 +15,7 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <title>landing</title>
+    <title>webmaster 2004-901</title>
     
     <style> 
         * {
@@ -136,8 +139,8 @@
         }
 
         model-viewer {
-            width: 800px;
-            height: 600px;
+            width: 80%;
+            height: 100%;
           }
 
           section a {
@@ -150,12 +153,10 @@
         
         <nav id="navBar">
             <ul>
-                <img src="/images/TotheStarsHomeLogo.svg" style="height: 75%; padding: 0; top: 0;">
+                <img src="/images/TotheStarsHomeLogo.svg" style="height: 10vh; padding: 0; top: 0; cursor: pointer;" onclick="MovetoIndex()">
+                    
                 <li>
-                    <a href="index.html">Landing</a>
-                </li>
-                <li>
-                    <a href="info.html">Info</a>
+                    <a href="info.html">Travel Requirements</a>
                 </li>
                 <li>
                     <a href="book.html">Book</a>
@@ -176,9 +177,9 @@
 <section id="topHead">
     <div id="leftTable">
         <h1 id="tableHead">TO THE STARS</h1>
-        <p id="missionText"><b>OUR MISSION:</b><br> As the first true space tourism company on the planet, TO THE STARS is committed to providing all customers with the best possible space adventure. We believe that everyone deserves the opportunity to make it to space, Earth's final frontier.</p>
+        <p id="missionText"><b>OUR MISSION:</b><br> As the first true space tourism company on the planet, TO THE STARS is committed to providing all customers with the best possible space adventure. We believe that everyone deserves the opportunity to make it to space, Earth's final frontier. We offer training plans and opportunities for any travelers who need a certification to meet our travel requirements, as well as vacation style trips for any group which meets the requirements. We also allow people to book solely training plans, if they only want to complete astronaut training, rather than taking a full trip to outer space at the moment.</p>
         <br>
-        <button id="bookButton" style="color: rgb(170, 86, 23);">BOOK NOW</button>
+        <button id="bookButton" style="color: rgb(170, 86, 23);" onclick="bookNow()">BOOK NOW</button>
     </div>
     <div id="rightTable">
         <img src="/images/AstronautandRocket.svg" id="suitcaseAstronaut">
@@ -187,11 +188,6 @@
 </section>
 </div>
 
-    <section>
-        <h2>Our Mission</h2>
-        <p>As the first true space tourism and public astronaut training company on the planet, To The Stars, is committed to providing all customers with the best possible space adventure for them. We believe that everyone deserves the opportunity to make it to space, Earth’s final frontier. We offer training plans and opportunities for any travelers who need a certification to meet our travel requirements, as well as vacation style trips for any group which meets the requirements. We also allow people to book solely training plans, if they only want to complete astronaut training, rather than taking a full trip to outer space at the moment. 
-        </p>
-    </section>
 
     <section id="places">
         <div id="leftPlaces">
@@ -254,7 +250,7 @@
                 </li>
             </ul>
     </section>
-    <section>
+    <section style="min-height: 30vh; height: 50vh;">
         <h2>Why us?</h2>
         <p>At To the Stars, we are dedicated to providing all of our customers with the best possible individualized experiences. From our state-of-the-art spacecraft, to our highly trained crew, our number one priority is making your experience truly the journey of a lifetime. Discover the beauty of space like never before, and begin your personalized journey there with us today either through email, or in-person at one of our locations!
         </p>
@@ -276,12 +272,6 @@
     <script src="js/home.js"></script>
     <script type="module">
 
-       $("#pastTripsCarousel").flickity({
-        wrapAround: true,
-        autoPlay: 1500,
-        pauseAutoPlayOnHover: false
-    
-       });
         
     </script>
 </body>

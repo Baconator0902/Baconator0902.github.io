@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/phone.css">
+    <link rel="stylesheet" media="screen and (min-width: 1200px)" href="css/main.css">
+    <script src="js/navbar.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet"> 
@@ -40,12 +42,10 @@
         
         <nav id="navBar">
             <ul>
-                <img src="/images/TotheStarsHomeLogo.svg" style="height: 75%; padding: 0; top: 0;">
+                <img src="/images/TotheStarsHomeLogo.svg" style="height: 10vh; padding: 0; top: 0; cursor: pointer;" onclick="MovetoIndex()">
+                    
                 <li>
-                    <a href="index.html">Landing</a>
-                </li>
-                <li>
-                    <a href="info.html">Info</a>
+                    <a href="info.html">Travel Requirements</a>
                 </li>
                 <li>
                     <a href="book.html">Book</a>
@@ -64,8 +64,8 @@
         </div>
 
     <main>
-        <p>Open our team's plan of work <a href=#>here</a></p>
-        <p>Open our team's copyright checklist <a href=#>here</a></p>
+        <p>Open our team's plan of work <a href="pdfs/planOfWorks.pdf">here</a></p>
+        <p>Open our team's copyright checklist <a href="pdfs/STUDENTCOPYRIGHTCHECKLIST.pdf">here</a></p>
 
         <br>
         <h1>Works Cited</h1>

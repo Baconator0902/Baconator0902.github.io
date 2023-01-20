@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/phone.css">
+    <link rel="stylesheet" media="screen and (min-width: 1200px)" href="css/main.css">
+    <script src="js/navbar.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet"> 
@@ -30,7 +32,6 @@
         }
 
         li {
-            display: block;
             float: inherit !important;
             padding: 10px;
             margin: 0;
@@ -44,11 +45,28 @@
 
         .borderedP {
             border: 2px solid rgb(170, 86, 23);
+            border-radius: 50px;
         }
 
         section {
             background-image: none;
             background-color: #FFF1E7 !important;
+        }
+
+        #pilotList, #pilotList * {
+            list-style-type: disc;
+            text-align: left;
+            padding-left: 3vw;
+        }
+
+        h2 {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            padding: 0;
+            margin: 0;
         }
     </style>
 </head>
@@ -57,12 +75,10 @@
         
         <nav id="navBar">
             <ul>
-                <img src="/images/TotheStarsHomeLogo.svg" style="height: 75%; padding: 0; top: 0;">
+                <img src="/images/TotheStarsHomeLogo.svg" style="height: 10vh; padding: 0; top: 0; cursor: pointer;" onclick="MovetoIndex()">
+                    
                 <li>
-                    <a href="index.html">Landing</a>
-                </li>
-                <li>
-                    <a href="info.html">Info</a>
+                    <a href="info.html">Travel Requirements</a>
                 </li>
                 <li>
                     <a href="book.html">Book</a>
@@ -80,8 +96,8 @@
            </nav>
         </div>
 
-        <section>
-            <h1>Travel Requirement</h1>
+        <section style="height: 50vh; min-height: 30vh;">
+            <h1>Travel Requirements</h1>
 
             <p class="borderedP">Since our number one priority is your safety, there are some requirements that need to be met for all future astronauts. These requirements include a passport, completion of the standard astronaut physical, completion of a test flight program, time spent as a Pilot-In-Command on some form of jet aircraft, a signed trip safety waiver, as well as a negative COVID test. Each of these requirements, as well as how to complete them will be explained below. </p>
             
@@ -91,11 +107,11 @@
             <div class="leftSide">
                 <h2>Pilot-In-Command</h2>
                 <p>Similarly to the test flight, this is a requirement to ensure the safety of all customers for this trip. While 1000 hours may seem inaccessible, this number can be reduced or altered after contacting us on a situational basis. These situations are included, but not limited to:</p>
-                <ul>
-                    <li>One member of a traveling group meets this requirement</li>
-                    <li>Together, all members of a group meet this requirement</li>
+                <ul id="pilotList">
+                    <li>One member of a traveling group meets this requirement.</li>
+                    <li>Together, all members of a group meet this requirement.</li>
                     <li>All members of a group of 2 or more have had 50 hours of experience a piece, spread out over a month before travel.</li>
-                    <li>This is your second trip or after, </li>
+                    <li>This is your second trip or after. </li>
                 </ul>
                 <p>Please reach out to us regarding your unique situation before booking a trip to plan accordingly. We will hopefully be able to connect you to some pilot-in-command program (including ours) or adjust the requirements to meet your needs. This is the loosest requirement, as you will most often be traveling in groups, each with some experience, or with a highly experienced chaperone.</p>
             
@@ -106,9 +122,9 @@
         <section id="testFlight" class="changingSection">
             <div class="leftSide">
 
-                <h2>testFlight</h2>
+                <h2>Test Flight</h2>
                 <p>Since anyone aboard the ship, even with an experienced flight crew helping them, needs to be able to contribute to the flight given an emergency situation, we require all customers to complete a nationally certified test flight course to familiarize themselves with flight situations. If this is inaccessible for you in any way, such as our closest location being in another nation, we can waive this requirement on a situational basis in exchange for some collegiate degree in a STEM field, preferably engineering or mathematics, or if you are traveling with a chaperone and at least one member of your party satisfies this requirement.
-                    Click “here” to schedule a test flight program!
+                    Click <a href="book.html">Here</a> to schedule a test flight program!
                     </p>
             </div>
 
@@ -129,8 +145,8 @@
             <div class="leftSide">
                 <h2>Physical</h2>
                 <p>Since any trip to space is going to take an obvious toll on your body, there are some very necessary physical requirements for astronauts, including our customers. As such, anyone seeking to travel to space must complete our physical requirements tests successfully. This consists of several parts, including: vision capable of being corrected to 20/20; sitting blood pressure below 140/90; atmospheric pressure training, and more. Upon completion of your first physical, you will be issued a “MyPhysical” card on site that can then be renewed as needed.
-                    Click “here” to download our company's full physical policy today!
-                    Click “here” to sign up for a physical!
+                    Click <a href="/pdfs/PhysicalInformation.pdf">Here</a> to download our company's full physical policy today!
+                    Click <a href="book.html">Here</a> to sign up for a physical!
                     </p>
             </div>
                 <img src="/images/PhysicalGraphic.svg" class="rightSide">
@@ -147,7 +163,7 @@
             <img src="/images/CovidAstro.svg" class="rightSide">
         </section>
 
-        <section id="forReturningTravelers">
+        <section id="forReturningTravelers" style="height: 50vh; min-height: 30vh;">
             <h2>For Returning Travelers</h2>
             <p class="borderedP">If the trip you are currently planning is going to be a year removed from your most recent trip, you will need to renew your flight physical requirements at one of our locations. Additionally, please make sure that you have a renewed and current passport, as well as a negative COVID test within 1 week of your planned departure. 
             </p>

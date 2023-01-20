@@ -15,7 +15,7 @@ function planTripFormSubmit() {
     monthDays = date.charAt(6);
     month = monthTens + monthDays;
 
-    cost = (locationNumber*1.1) * (partySize * 0.75) * (length * 20000);
+    cost = ((locationNumber + 20 /15)) * (partySize * 0.75) * (length * 20000) * 0.6;
     if (month > 5 && month < 9) {
         cost *= 1.2;
     } else if (month < 3 || month > 11) {
