@@ -99,6 +99,7 @@ nav > * {
 footer {
   height: 20vh;
   background-image: url("/images/LandingPageBackground.svg");
+  position:absolute;
 }
 
 footer > ul {
