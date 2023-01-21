@@ -9,6 +9,9 @@
     text-align: center;
 }
 
+main {
+    padding: 0;
+}
 
 h1, h2 {
   text-transform: uppercase;
@@ -58,14 +61,19 @@ body {
 }
 
 img {
-    width: 100%;
+    width: 90vw !important;
     padding: 0;
     margin: 0;
+}
+
+nav img {
+    width: 20vw !important;
 }
 
 nav {
   top: 0;
   height: 15vh;
+  padding-right: 5vw;
 }
 
 nav > ul > img:hover {
@@ -75,17 +83,16 @@ nav > ul > img:hover {
 nav > ul {
     display: grid;
     height: 100%;
-    grid-template-columns: 25vw 15vw 15vw 15vw 15vw 15vw;
+    grid-template-columns: 15vw 15vw 15vw 15vw 15vw 20vw;
 }
 
 nav * {
-  
+  font-size: 0.7em;
   margin: 0;
   padding: 0;
 }
 
 nav > * {
-  font-size: 0.75em;
   margin-right: 0 !important;
   position: relative;
   top: 20px;
@@ -233,7 +240,7 @@ span {
 
 section {
   display: block;
-  min-height: 100vh; 
+  min-height: 50vh; 
 }
 
 section:nth-child(odd) {
@@ -254,37 +261,22 @@ section:nth-child(even) {
   border-radius: 5px;
 }
 
-
-
-
-*[style="grid-row;"] {
-    display: block !important;
+label {
+    left: 0;
 }
 
-h1 {
-    font-size: 3em;
+#chooseFiveDiv {
+    margin-top: 20vh !important;
 }
 
-h2 {
-    font-size: 2em;
+#bottomTable {
+    height: 370vh !important;
 }
 
-h3 {
-    font-size: 2em;
+main * {
+    display: block;
 }
 
-h4 {
-    font-size: 2em;
-}
-
-li {
-    font-size: 1em;
-}
-
-p {
-    font-size: 1em;
-}
-
-img {
-    width: 20vw;
+input {
+    margin-left: 40vw !important;
 }

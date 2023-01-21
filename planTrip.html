@@ -27,8 +27,17 @@
             flex-wrap: nowrap;
         }
 
+        @media only screen and (max-width: 1200px) {
+            #costsForTraining {
+                display: block;
+            }
+          }
+          @media only screen and (min-width: 1200px) {
+            #costsForTraining {
+                display: grid;
+            }
+          }
         #costsForTraining {
-            display: grid;
             grid-template-columns: 30vw 30vw 30vw;
             column-gap: 3vw;
             grid-template-rows: 0.1fr 0.5fr 0.05fr;
@@ -91,92 +100,95 @@
            </nav>
         </div>
     
+        <main>
+            <section>
 
-    <section>
-
-        <h2>Estimate cost</h2>
-        <div style="display: flex; justify-content: center;">
-            <img src="/images/PlanATripHeader.svg" style="width: 80vw; height: auto;">
-        </div>
-
-            <label for="party_size">Party size</label>
-                <input type="number" id="party_size" name="party_size" min="1" max="5" value="1" required>
-                <br>
-                <label for="date">Approximate Date</label>
-                <input type="date" id="date" name="date" required>
-                <br>
-                <label for="trip_length">Trip Length (days)</label>
-                <input type="number" id="trip_length" name="trip_length" min="4" max="100" value="10" required>
-                <br>
-                <label for="launch_location" style="display: block; margin-left: 27vw;">Launch Location</label>
-                <br>
-                <input type="radio" id="USA" name="launch_location" value="USA">
-                <label for="USA" id="launch_location" class="countryLabel">USA</label>
-                <br>
-                <input type="radio" id="RUSSIA" name="launch_location" value="RUSSIA">
-                <label for="RUSSIA" class="countryLabel">RUSSIA</label>
-                <br>
-                <input type="radio" id="SPAIN" name="launch_location" value="SPAIN">
-                <label for="SPAIN" class="countryLabel">SPAIN</label>
-                <br>
-                <input type="radio" id="GERMANY" name="launch_location" value="GERMANY">
-                <label for="GERMANY" class="countryLabel">GERMANY</label>
-                <br>
-                <input type="radio" id="FRANCE" name="launch_location" value="FRANCE">
-                <label for="FRANCE" class="countryLabel">FRANCE</label>
-                <br>
-                <input type="radio" id="ITALY" name="launch_location" value="ITALY">
-                <label for="ITALY" class="countryLabel">ITALY</label>
-                <br>
-                <input type="radio" id="INDIA" name="launch_location" value="INDIA">
-                <label for="INDIA" class="countryLabel">INDIA</label>
-                <br>
-                <input type="radio" id="CHINA" name="launch_location" value="CHINA">
-                <label for="CHINA" class="countryLabel">CHINA</label>
-                <br>
-                <br>
-                <button onclick="planTripFormSubmit()" style="height: fit-content;">Estimate Cost</button>
-
-        <h2 id="predictedCostText" style="display: none;">Your predicted cost is: </h2> 
-    </section>
-
-    <h2 style="background-color: #FFF1E7; margin: 0; padding-top: 10vh;">Costs for Training</h2>
-
-    <section id="costsForTraining">
+                <h2>Estimate cost</h2>
+                <div style="display: flex; justify-content: center;">
+                    <img src="/images/PlanATripHeader.svg" style="width: 80vw; height: auto;">
+                </div>
         
-                <div style="grid-column: 1; grid-row: 1;">
-                    <h4>Flight Physical</h4>
-                    <p><b>$50</b> -walk ins accepted</p>
-                </div>
-                <div style="grid-column: 1; grid-row: 2; display: flex; justify-self: center;">
-                    <img src="/images/PhysicalGraphic.svg">
-                </div>
+                    <label for="party_size">Party size</label>
+                        <input type="number" id="party_size" name="party_size" min="1" max="5" value="1" required>
+                        <br>
+                        <label for="date">Approximate Date</label>
+                        <input type="date" id="date" name="date" required>
+                        <br>
+                        <label for="trip_length">Trip Length (days)</label>
+                        <input type="number" id="trip_length" name="trip_length" min="4" max="100" value="10" required>
+                        <br>
+                        <label for="launch_location" style="display: block; margin-left: 27vw;">Launch Location</label>
+                        <br>
+                        <input type="radio" id="USA" name="launch_location" value="USA">
+                        <label for="USA" id="launch_location" class="countryLabel">USA</label>
+                        <br>
+                        <input type="radio" id="RUSSIA" name="launch_location" value="RUSSIA">
+                        <label for="RUSSIA" class="countryLabel">RUSSIA</label>
+                        <br>
+                        <input type="radio" id="SPAIN" name="launch_location" value="SPAIN">
+                        <label for="SPAIN" class="countryLabel">SPAIN</label>
+                        <br>
+                        <input type="radio" id="GERMANY" name="launch_location" value="GERMANY">
+                        <label for="GERMANY" class="countryLabel">GERMANY</label>
+                        <br>
+                        <input type="radio" id="FRANCE" name="launch_location" value="FRANCE">
+                        <label for="FRANCE" class="countryLabel">FRANCE</label>
+                        <br>
+                        <input type="radio" id="ITALY" name="launch_location" value="ITALY">
+                        <label for="ITALY" class="countryLabel">ITALY</label>
+                        <br>
+                        <input type="radio" id="INDIA" name="launch_location" value="INDIA">
+                        <label for="INDIA" class="countryLabel">INDIA</label>
+                        <br>
+                        <input type="radio" id="CHINA" name="launch_location" value="CHINA">
+                        <label for="CHINA" class="countryLabel">CHINA</label>
+                        <br>
+                        <br>
+                        <button onclick="planTripFormSubmit()" style="height: fit-content;">Estimate Cost</button>
+        
+                <h2 id="predictedCostText" style="display: none;">Your predicted cost is: </h2> 
+            </section>
+        
+            <h2 style="background-color: #FFF1E7; margin: 0; padding-top: 10vh;">Costs for Training</h2>
+        
+            <section id="costsForTraining">
                 
+                        <div style="grid-column: 1; grid-row: 1;">
+                            <h4>Flight Physical</h4>
+                            <p><b>$50</b> -walk ins accepted</p>
+                        </div>
+                        <div style="grid-column: 1; grid-row: 2; display: flex; justify-self: center;">
+                            <img src="/images/PhysicalGraphic.svg">
+                        </div>
+                        
+        
+        
+                        <div style="grid-column: 2; grid-row: 1;">
+                            <h4>Test Flight Program</h4>
+                            <p><b>$1,000</b> -2 week course (includes 2 meals a day, lunch and dinner, does not include breakfast or a hotel)
+                            </p>
+                        </div>
+                        <div style="grid-column: 2; grid-row: 2; display: flex; justify-self: center;">
+                            <img src="/images/PilotInCommandGraphic.svg">
+                        </div>
+                        
+        
+        
+                        <div style="grid-column: 3; grid-row: 1;">
+                            <h4>Pilot-In-Command</h4>
+                            <p><b>$10 per hour</b> -you will be directed to an appropriate location to complete this part of training. Please note, you will only be able to do this after completion of a flight physical.
+                            </p>
+                        </div>
+                        <div style="grid-column: 3; grid-row: 2; display: flex; justify-self: center;">
+                            <img src="/images/TestFlightGraphic.svg">
+                        </div>
+        
+                        <a href="book.html" style="grid-row: 3; grid-column: 2;">Book a trip or training session today!!</a>
+        
+            </section>
+            
+        </main>
 
-
-                <div style="grid-column: 2; grid-row: 1;">
-                    <h4>Test Flight Program</h4>
-                    <p><b>$1,000</b> -2 week course (includes 2 meals a day, lunch and dinner, does not include breakfast or a hotel)
-                    </p>
-                </div>
-                <div style="grid-column: 2; grid-row: 2; display: flex; justify-self: center;">
-                    <img src="/images/PilotInCommandGraphic.svg">
-                </div>
-                
-
-
-                <div style="grid-column: 3; grid-row: 1;">
-                    <h4>Pilot-In-Command</h4>
-                    <p><b>$10 per hour</b> -you will be directed to an appropriate location to complete this part of training. Please note, you will only be able to do this after completion of a flight physical.
-                    </p>
-                </div>
-                <div style="grid-column: 3; grid-row: 2; display: flex; justify-self: center;">
-                    <img src="/images/TestFlightGraphic.svg">
-                </div>
-
-                <a href="book.html" style="grid-row: 3; grid-column: 2;">Book a trip or training session today!!</a>
-
-    </section>
     
     
     <footer>
