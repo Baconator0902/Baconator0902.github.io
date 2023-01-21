@@ -106,7 +106,8 @@ nav > * {
 footer {
   height: 20vh;
   background-image: url("/images/LandingPageBackground.svg");
- 
+ display: flex;
+ content: flex-end;
 }
 
 footer > ul {
