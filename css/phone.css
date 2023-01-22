@@ -241,7 +241,7 @@ span {
 
 section {
   display: block;
-  min-height: 50vh; 
+  min-height: 70vh; 
 }
 
 section:nth-child(odd) {
