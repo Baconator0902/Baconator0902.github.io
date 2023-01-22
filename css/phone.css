@@ -291,7 +291,7 @@ input {
   height: 90vh !important;
 }
 #forReturningTravelers{
-  height: 90vh !important;
+  height: 100vh important;
 }
 #smallText{
   font-size: 12px;
