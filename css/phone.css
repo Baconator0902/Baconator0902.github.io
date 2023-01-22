@@ -281,6 +281,9 @@ main * {
 input {
     margin-left: 40vw !important;
 }
-#annoyingassSection{
+#sectionForMoreInfo{
       height: 90vh !important;
+}
+#sectionForWhyUs{
+  height: 90vh !important;
 }
