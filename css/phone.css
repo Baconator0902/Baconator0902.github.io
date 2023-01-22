@@ -296,3 +296,6 @@ input {
 #smallText{
   font-size: 12px;
 }
+#chooseFive{
+  height: 90vh !important;
+}
