@@ -200,7 +200,11 @@
             grid-template-rows: 10vh 35vh 35vh 35vh;
             padding-bottom: 10vh;
           }
-
+          @media only screen and (max-width: 1200px) {
+            #test {
+                height: fit-content;
+            }
+          }
     </style>
 </head>
 <body>
@@ -321,12 +325,12 @@
                     </p>
                     </section>
             
-                <section style="min-height: 30vh; height: 50vh;">
-                    <div>
+                <section style="min-height: 30vh; height: 50vh;" id = "test">
+                   
                     <h2>Learn More</h2>
                     <p>Click<a href="safety.html">Here</a>to learn more about our safety policies!</p>
                     <p>Click<a href="info.html">Here</a>to learn more about our travel requirements!</p>
-                    </div>
+                   
 
                 </section>
         </main>
