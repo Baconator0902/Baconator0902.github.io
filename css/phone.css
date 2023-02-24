@@ -106,11 +106,13 @@ nav > * {
 footer {
   height: 20vh;
   background-image: url("/images/LandingPageBackground.svg");
+
 }
 
 footer > ul {
   display: grid;
   grid-template-columns: 50% 20% 20% 10%;
+  
 }
 
 footer > ul:nth-child(1) {
