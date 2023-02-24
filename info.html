@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/phone.css">
-    <link rel="stylesheet" media="screen and (min-width: 1200px)" href="css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 1600px)" href="css/phone.css">
+    <link rel="stylesheet" media="screen and (min-width: 1600px)" href="css/main.css">
     <script src="js/navbar.js"></script>
     <script src="js/info.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +21,20 @@
             font-family: 'Teko', sans-serif;
         }
 
-        @media only screen and (max-width: 1200px) {
+        @media only screen and (max-width: 1600px) {
             .changingSection {
                 display: block;
             }
+            #requirementsText {
+                height: 90vh;
+            }
           }
-          @media only screen and (min-width: 1200px) {
+          @media only screen and (min-width: 1600px) {
             .changingSection {
                 display: grid;
+            }
+            #requirementsText {
+                height: 50vh;
             }
           }
 
@@ -114,7 +120,7 @@
         </div>
 
         <main>
-            <section style="height: 50vh; min-height: 30vh;">
+            <section style="min-height: 30vh;" id="requirementsText">
                 <h1>Travel Requirements</h1>
     
                 <p class="borderedP">Since our number one priority is your safety, there are some requirements that need to be met for all future astronauts. These requirements include a passport, completion of the standard astronaut physical, completion of a test flight program, time spent as a Pilot-In-Command on some form of jet aircraft, a signed trip safety waiver, as well as a negative COVID test. Each of these requirements, as well as how to complete them will be explained below. </p>
@@ -185,7 +191,7 @@
                 </div>
             </section>
     
-            <section id="forReturningTravelers" style="height: 50vh; min-height: 30vh; padding-top: 20vh;">
+            <section id="forReturningTravelers" style="height: 60vh; min-height: 30vh; padding-top: 20vh;">
                 <h2>For Returning Travelers</h2>
                 <p class="borderedP">If the trip you are currently planning is going to be a year removed from your most recent trip, you will need to renew your flight physical requirements at one of our locations. Additionally, please make sure that you have a renewed and current passport, as well as a negative COVID test within 1 week of your planned departure. 
                 </p>

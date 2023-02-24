@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/phone.css">
-    <link rel="stylesheet" media="screen and (min-width: 1200px)" href="css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 1600px)" href="css/phone.css">
+    <link rel="stylesheet" media="screen and (min-width: 1600px)" href="css/main.css">
     <script src="js/navbar.js"></script>
     <link rel="stylesheet" href="css/model.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,14 +27,41 @@
             flex-wrap: nowrap;
         }
 
-        @media only screen and (max-width: 1200px) {
+        @media only screen and (max-width: 1600px) {
             #costsForTraining {
                 display: block;
             }
+            button {
+                height: 30vh;
+                width: 30vw;
+                font-size: 20px;
+            }
+            label {
+                
+            }
+            input {
+                margin-left: auto !important;
+                margin-right: auto !important;
+                width: 60vw;
+            }
+            #launchLocationLabel {
+                margin-left: 0vw;
+            }
           }
-          @media only screen and (min-width: 1200px) {
+          @media only screen and (min-width: 1600px) {
             #costsForTraining {
                 display: grid;
+            }
+            label {
+                position: absolute;
+            }
+            input {
+                position: relative;
+                margin-left: 15vw;
+                width: 25vw;
+            }
+            #launchLocationLabel {
+                margin-left: 27vw;
             }
           }
         #costsForTraining {
@@ -46,16 +73,6 @@
         #costsForTraining img {
             width: 30vw;
             height: auto;
-        }
-
-        label {
-            position: absolute;
-        }
-
-        input {
-            position: relative;
-            margin-left: 15vw;
-            width: 25vw;
         }
 
         input[type="file"] {
@@ -117,7 +134,7 @@
                         <label for="trip_length">Trip Length (days)</label>
                         <input type="number" id="trip_length" name="trip_length" min="4" max="100" value="10" required>
                         <br>
-                        <label for="launch_location" style="display: block; margin-left: 27vw;">Launch Location</label>
+                        <label for="launch_location" style="display: block;" id="launchLocationLabel">Launch Location</label>
                         <br>
                         <input type="radio" id="USA" name="launch_location" value="USA">
                         <label for="USA" id="launch_location" class="countryLabel">USA</label>

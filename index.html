@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/phone.css">
-    <link rel="stylesheet" media="screen and (min-width: 1200px)" href="css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 1600px)" href="css/phone.css">
+    <link rel="stylesheet" media="screen and (min-width: 1600px)" href="css/main.css">
     <script src="js/navbar.js"></script>
     <script src="js/home.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,13 +49,31 @@
             padding-left: 20px;
           }
 
-          @media only screen and (max-width: 1200px) {
-            #topHead {
+          @media only screen and (max-width: 1600px) {
+            #topHead, #leftTable, #rightTable, #places, #highlights {
                 display: block;
             }
+            #leftPlaces {
+                height: 50vh;
+            }
+            model-viewer {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            img {
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0;
+                left: 0;
+                width: 30%;
+            }
+            section {
+                padding-left: 0;
+                padding-right: 0;
+            }
           }
-          @media only screen and (min-width: 1200px) {
-            #topHead {
+          @media only screen and (min-width: 1600px) {
+            #topHead, #leftTable, #rightTable, #places, #highlights {
                 display: grid;
             }
           }
@@ -69,27 +87,6 @@
         #topHead * {
             color: white;
         }
-
-        @media only screen and (max-width: 1200px) {
-            #leftTable {
-                display: block;
-            }
-          }
-          @media only screen and (min-width: 1200px) {
-            #leftTable {
-                display: grid;
-            }
-          }
-          @media only screen and (max-width: 1200px) {
-            #rightTable {
-                display: block;
-            }
-          }
-          @media only screen and (min-width: 1200px) {
-            #rightTable {
-                display: grid;
-            }
-          }
         #leftTable {
             grid-column: 1;
             grid-template-columns: 1fr;
@@ -140,16 +137,6 @@
             grid-row-end: 3;
         }
         
-        @media only screen and (max-width: 1200px) {
-            #places {
-                display: block;
-            }
-          }
-          @media only screen and (min-width: 1200px) {
-            #places {
-                display: grid;
-            }
-          }
         #places {
             grid-template-columns: 50% 50%;
         }
@@ -182,17 +169,6 @@
 
           section a {
             color: blue;
-          }
-
-          @media only screen and (max-width: 1200px) {
-            #highlights {
-                display: block;
-            }
-          }
-          @media only screen and (min-width: 1200px) {
-            #highlights {
-                display: grid;
-            }
           }
 
           #highlights {
@@ -315,13 +291,13 @@
                     </div>
                      
                 </section>
-                <section style="min-height: 30vh; height: 50vh;">
+                <section style="min-height: 30vh; height: 90vh;">
                     <h2>Why us?</h2>
                     <p>At To the Stars, we are dedicated to providing all of our customers with the best possible individualized experiences. From our state-of-the-art spacecraft, to our highly trained crew, our number one priority is making your experience truly the journey of a lifetime. Discover the beauty of space like never before, and begin your personalized journey there with us today either through email, or in-person at one of our locations!
                     </p>
                     </section>
             
-                <section style="min-height: 30vh; height: 50vh;">
+                <section style="min-height: 30vh; height: 90vh;">
                     <h2>Learn More</h2>
                     <p>Click<a href="safety.html">Here</a>to learn more about our safety policies!</p>
                     <p>Click<a href="info.html">Here</a>to learn more about our travel requirements!</p>

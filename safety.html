@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/phone.css">
-    <link rel="stylesheet" media="screen and (min-width: 1200px)" href="css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 1600px)" href="css/phone.css">
+    <link rel="stylesheet" media="screen and (min-width: 1600px)" href="css/main.css">
     <script src="js/navbar.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,42 +33,47 @@
             width: 15vw !important;
             height: auto;
         }
-        @media only screen and (max-width: 1200px) {
-            #threeSystems {
-                display: block;
-            }
-          }
-          @media only screen and (min-width: 1200px) {
-            #threeSystems {
-                display: grid;
-            }
-          }
-        #threeSystems {
-            height: 150vh;
-            grid-template-columns: 40vw 50vw;
-            grid-template-rows: 50vh 50vh 50vh;
-            column-gap: 10vh;
-        }
 
         #threeSystems > img {
             height: 40vh;
         }
-        @media only screen and (max-width: 1200px) {
+        @media only screen and (max-width: 1600px) {
             #bottomTable {
                 display: block;
             }
+            #threeSystems {
+                display: block;
+                height: 200vh;
+                grid-template-columns: 40vw 50vw;
+                grid-template-rows: 50vh 50vh 50vh;
+                column-gap: 10vh;
+            }
+            #bottomTable {
+                height: 650vh;
+                grid-template-columns: 40vw 60vw;
+                grid-template-rows: 150vh 150vh 150vh 150vh;
+                column-gap: 10vh;
+            }
           }
-          @media only screen and (min-width: 1200px) {
+          @media only screen and (min-width: 1600px) {
             #bottomTable {
                 display: grid;
             }
+            #threeSystems {
+                display: grid;
+                height: 330vh;
+                grid-template-columns: 40vw 50vw;
+                grid-template-rows: 50vh 50vh 50vh;
+                column-gap: 10vh;
+            }
+            #bottomTable {
+                height: 200vh;
+                grid-template-columns: 40vw 60vw;
+                grid-template-rows: 75vh 75vh 75vh 75vh;
+                column-gap: 10vh;
+            }
           }
-        #bottomTable {
-            height: 200vh;
-            grid-template-columns: 40vw 60vw;
-            grid-template-rows: 75vh 75vh 75vh 75vh;
-            column-gap: 10vh;
-        }
+        
 
         #bottomTable p {
             font-size: 1.5em;
@@ -152,7 +157,7 @@
                 <img src="/images/Chaperones.svg" style="display: none;" class="shownFiveImage" id="section5ToShow">
             </section>
     
-            <section id="bottomTable" style="height: 330vh;">
+            <section id="bottomTable">
                 <div style="grid-column: 1; grid-row: 1;">
                     <h2>Take-Off Procedure</h2>
                     <p>The spacecraft begins in a vertical position on one of our launchpads, where it can be boarded. Following boarding, ignition begins, and the craft begins to takeoff. 66 seconds after takeoff, the first set of “strap on rockets” are discarded into the ocean, and the second set is activated. After another 66 seconds, this set is jettisoned too, leading to the final portions of takeoff, and the separation of the first and second stages. The second stage will then continue to propel the spacecraft until it runs out of fuel, where the third and final stage takes over, until the ship reaches cruising position. Detailed takeoff procedures and walkthroughs will be gone over and reviewed at either our test flight or pilot in command certifications.</p>    

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/phone.css">
-    <link rel="stylesheet" media="screen and (min-width: 1200px)" href="css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 1600px)" href="css/phone.css">
+    <link rel="stylesheet" media="screen and (min-width: 1600px)" href="css/main.css">
     <script src="js/navbar.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,28 +24,63 @@
             padding: 0;
         }
 
-        @media only screen and (max-width: 1200px) {
+        @media only screen and (max-width: 1600px) {
             main {
                 display: block;
             }
+            button {
+                height: 30vh;
+                width: 30vw;
+                font-size: 20px;
+            }
+            label {
+                
+            }
+            input {
+                margin-left: auto !important;
+                margin-right: auto !important;
+                width: 60vw;
+            }
+            #logInButtons {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+    
+            #logInButtons > * {
+                width: 60vw;
+                height: 10vh;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0;
+            }
           }
-          @media only screen and (min-width: 1200px) {
+          @media only screen and (min-width: 1600px) {
             main {
                 display: grid;
+            }
+            label {
+                position: absolute;
+            }
+            input {
+                position: relative;
+                margin-left: 15vw;
+                width: 25vw;
+            }
+            #logInButtons {
+                position: relative;
+                width: 100%;
+            }
+    
+            #logInButtons > * {
+                width: 100%;
             }
           }
         main {
             grid-template-columns: 1fr 1fr;
         }
 
-        #logInButtons {
-            position: relative;
-            width: 100%;
-        }
-
-        #logInButtons > * {
-            width: 100%;
-        }
+        
 
         #signUpDiv {
             padding: 0;
@@ -60,26 +95,16 @@
             padding: 0;
         }
 
-        label {
-            position: absolute;
-        }
-
-        input {
-            position: relative;
-            margin-left: 15vw;
-            width: 25vw;
-        }
-
         h2, label {
             color: rgb(170, 86, 23);
         }
 
         span {
             display: flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-  word-wrap: break-word;
+            justify-content: center;
+            align-items: center;
+            vertical-align: middle;
+            word-wrap: break-word;
         }
     </style>
 </head>
