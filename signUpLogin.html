@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen and (max-width: 1600px)" href="css/phone.css">
     <link rel="stylesheet" media="screen and (min-width: 1600px)" href="css/main.css">
+    <link rel="shortcut icon" href="">
     <script src="js/navbar.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet"> 
     <script src="js/signUpLogin.js"></script>
+    <script src = "dist/main.js"></script>
+    <script type = "module" src="src/index.js"></script>
 
+    <!---->
     <title>login/signup</title>
 
     <style>
@@ -150,17 +154,17 @@
                 <label for="age">Birth date*</label>
                 <input type="text" id="age" name="age" required placeholder="MM/DD/YYYY" onfocus="(this.type='date')">
                 <br>
-            <!--Yea so email here if this doesn't work-->
+         
                 <label for="phoneNumber">Phone Number</label>
                 <input type="text" id="phoneNumber" name="phoneNumber" placeholder="191-123-456-7890">
                 <br>
                 <label for="Email">Email*</label>
                 <input type="text" id="email" name="Email" placeholder="tothe.stars@gmail.com" required>
                 <br>
-              <!-- <label for="username">Username*</label>
+               <label for="username">Username*</label>
                 <input type="text" id="username" name="username" placeholder="JohnToTheStars09" required pattern="\S{5,}">
                 <br>
-              -->
+              
                 <label for="password1">password*</label>
                 <input type="password" id="password1" name="password1" required pattern="\S{8,}" placeholder="">
                 <br>
@@ -173,8 +177,8 @@
                 
                     <input type="checkbox" id="termsAndConditions" style="padding: 0; margin: 0; position: relative; vertical-align:middle; width:fit-content" name="termsAndConditions" required> 
                 </span> 
-                <input type="submit" id ='signUp' name = "signup_submit" value = "Sign Up">
-              
+                <!--<input type="submit" id ='signUp' name = "signup_submit" value = "Sign Up">-->
+                  <button onclick="signUp()" style="height: fit-content;">Test</button>
                 
             </form>
             
@@ -185,10 +189,10 @@
             <form>
                 <h2>Log In</h2>
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="JohnToTheStars09" required pattern="\S{5,}">
+                <input type="text" id="username2" name="username" placeholder="JohnToTheStars09" required pattern="\S{5,}">
                 <br>
                 <label for="password1">password:</label>
-                <input type="password" id="password1" name="password1" required pattern="\S{8,}" placeholder="">
+                <input type="password" id="password3" name="password1" required pattern="\S{8,}" placeholder="">
                 <br>
 
                 <a href="forgotPassword.html">Forgot password?</a>
@@ -215,5 +219,24 @@
                 <li><a href="references.html">References</a></li>
             </ul>
         </footer>
+
+        <script>
+            function signUp(){
+
+               
+                var email = document.getElementById("email");
+        var password = document.getElementById("password1");
+        auth.createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // ..
+          });
+            }
+        </script>
 </body>
 </html>
