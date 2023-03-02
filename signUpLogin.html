@@ -223,10 +223,12 @@
         <script>
             function signUp(){
 
-               
+               console.log("test");
                 var email = document.getElementById("email");
-        var password = document.getElementById("password1");
-        auth.createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
+                var password = document.getElementById("password1");
+                console.log(auth);
+                console.log(auth.createUserWithEmailAndPassword(auth, email, password));
+                auth.createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
             // ...

@@ -11,6 +11,8 @@ import{getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEm
     appId: "1:1021143887374:web:6ed7a05e4b879e3e04565f",
     measurementId: "G-E24BYQ72TT"
 });
+console.log(getAuth(firebaseApp));
+
  export const auth = getAuth(firebaseApp);
 
 
