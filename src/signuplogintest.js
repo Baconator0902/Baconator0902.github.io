@@ -4,6 +4,7 @@ import{getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEm
 export const firebaseApp = initializeApp({
     apiKey: "AIzaSyCLuVhLzDeQnta9lgl0m1yYgowupdwVTJI",
     authDomain: "webmaster-2004-901.firebaseapp.com",
+    databaseURL: "https://webmaster-2004-901-default-rtdb.firebaseio.com",
     projectId: "webmaster-2004-901",
     storageBucket: "webmaster-2004-901.appspot.com",
     messagingSenderId: "1021143887374",
