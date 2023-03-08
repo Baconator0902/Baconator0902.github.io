@@ -11,8 +11,8 @@ export const firebaseApp = initializeApp({
     appId: "1:1021143887374:web:6ed7a05e4b879e3e04565f",
     measurementId: "G-E24BYQ72TT"
 });
-export const auth = getAuth(firebaseApp);
-
+//export const auth = getAuth(firebaseApp);
+export const auth = firebase.auth();
  /* function signUp(){
     
      var email = document.getElementById("email");
