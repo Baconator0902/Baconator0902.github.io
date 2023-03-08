@@ -26,8 +26,11 @@
     <script type="module">
         import { signUp } from "/src/index.js";
 
+        
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password1").value;
         submitButton = document.getElementById("submitButton");
-        submitButton.onclick = function(){
+        submitButton.onclick = function(email, password){
             signUp();
         };
 

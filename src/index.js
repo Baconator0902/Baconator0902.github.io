@@ -6,8 +6,6 @@ console.log(auth);
 
  export function signUp(email, password){
     console.log("maybe");
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password1").value;
     createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
 // Signed in 
 const user = userCredential.user;
@@ -18,6 +16,8 @@ console.log(user);
 const errorCode = error.code;
 const errorMessage = error.message;
 console.log(errorMessage);
+console.log(error);
+console.log(errorCode);
 // ..
 });
 }
