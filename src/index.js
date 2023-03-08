@@ -4,7 +4,7 @@ import{getAuth, createUserWithEmailAndPassword} from 'https://www.gstatic.com/fi
 console.log(firebaseApp);
 console.log(auth);
 
- //function signUp(){
+ export function signUp(email, password){
     console.log("maybe");
     var email = document.getElementById("email").value;
     var password = document.getElementById("password1").value;
@@ -20,4 +20,4 @@ const errorMessage = error.message;
 console.log(errorMessage);
 // ..
 });
-//}
+}

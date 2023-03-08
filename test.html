@@ -18,9 +18,20 @@
     <form>
         <input id="email">
         <input id="password1">
-        <button onclick="signUp()"></button>
+        <button id = "submitButton"></button>
 
     </form>
+
+      
+    <script type="module">
+        import { signUp } from "/src/index.js";
+
+        submitButton = document.getElementById("submitButton");
+        submitButton.onclick = function(){
+            signUp();
+        };
+
+    </script>
 
 </body>
 </html>
