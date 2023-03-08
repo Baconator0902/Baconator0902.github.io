@@ -4,7 +4,7 @@ import{getAuth, createUserWithEmailAndPassword} from 'https://www.gstatic.com/fi
 console.log(firebaseApp);
 console.log(auth);
 
- export function signUp(email, password){
+ export function signUp(email, password, auth){
     console.log("maybe");
     createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
 // Signed in 
