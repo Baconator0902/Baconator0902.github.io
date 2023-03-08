@@ -27,8 +27,8 @@
         import { signUp } from "/src/index.js";
         import{auth} from '/src/signuplogintest.js';
         var goodAuth = auth;
-        String? email = document.getElementById("email").value;
-        String? password = document.getElementById("password1").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password1").value;
         submitButton = document.getElementById("submitButton");
         submitButton.onclick = function(email, password, goodAuth){
             signUp();
