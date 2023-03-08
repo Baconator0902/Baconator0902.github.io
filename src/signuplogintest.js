@@ -12,7 +12,7 @@ export const firebaseApp = initializeApp({
     measurementId: "G-E24BYQ72TT"
 });
 //export const auth = getAuth(firebaseApp);
-export const auth = firebase.auth();
+export const auth = firebaseApp.auth();
  /* function signUp(){
     
      var email = document.getElementById("email");
