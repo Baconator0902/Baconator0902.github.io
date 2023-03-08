@@ -1,7 +1,7 @@
 import { initializeApp} from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js';
 import{getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
 
-var config = {
+export const firebaseApp = initializeApp({
     apiKey: "AIzaSyCLuVhLzDeQnta9lgl0m1yYgowupdwVTJI",
     authDomain: "webmaster-2004-901.firebaseapp.com",
     databaseURL: "https://webmaster-2004-901-default-rtdb.firebaseio.com",
@@ -10,10 +10,9 @@ var config = {
     messagingSenderId: "1021143887374",
     appId: "1:1021143887374:web:6ed7a05e4b879e3e04565f",
     measurementId: "G-E24BYQ72TT"
-};
-firebase.initializeApp(config);
-//export const auth = getAuth(firebaseApp);
-export const auth = firebase.auth();
+});
+export const auth = getAuth(firebaseApp);
+
  /* function signUp(){
     
      var email = document.getElementById("email");
