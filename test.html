@@ -23,16 +23,27 @@
     </form>
 
       
-    <script type="module">
+    <script type="module" >
         import { signUp } from "/src/index.js";
         import{auth} from '/src/signuplogintest.js';
-        var goodAuth = auth;
-        var email = document.getElementById("email").value;
-        var password = document.getElementById("password1").value;
-        submitButton = document.getElementById("submitButton");
-        submitButton.onclick = console.log(email, password); //function(email, password, goodAuth){
+        var x = 0;
+
+        var submitButton = document.getElementById("submitButton");
+        console.log(submitButton);
+        submitButton.addEventListener("click", onClickFunction());
+       async function onClickFunction() {
+
+             var email = document.getElementById("email").value;
+            await email;
+            console.log(email);
+            return email;
+          
+        
+        //function(email, password, goodAuth){
            // signUp();
      //   };
+        }
+        
 
     </script>
 
