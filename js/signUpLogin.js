@@ -8,6 +8,7 @@ function signUpShow() {
     logInDiv.style.display = "none";
     showSignUpButton.style.display = "none";
     showLogInButton.style.display = "block";
+   // window.location.reload();
 }
 
 function logInShow() {
@@ -20,5 +21,7 @@ function logInShow() {
     logInDiv.style.display = "block";
     showSignUpButton.style.display = "block";
     showLogInButton.style.display = "none";
+    //window.location.reload();
+
 }
 

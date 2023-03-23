@@ -157,9 +157,11 @@
                 <label for="Email">Email*</label>
                 <input type="text" id="email" name="Email" placeholder="tothe.stars@gmail.com" required>
                 <br>
-               <label for="username">Username*</label>
+             <!--
+                 <label for="username">Username*</label>
                 <input type="text" id="username" name="username" placeholder="JohnToTheStars09" required pattern="\S{5,}">
                 <br>
+             --> 
               
                 <label for="password1">password*</label>
                 <input type="password" id="password1" name="password1" required pattern="\S{8,}" placeholder="">
@@ -174,7 +176,7 @@
                     <input type="checkbox" id="termsAndConditions" style="padding: 0; margin: 0; position: relative; vertical-align:middle; width:fit-content" name="termsAndConditions" required> 
                 </span> 
                 <!--<input type="submit" id ='signUp' name = "signup_submit" value = "Sign Up">-->
-                  <button onclick="signUp()" style="height: fit-content;">Test</button>
+                <button id = "submitButton" type="button">Sign Up</button>
                 
             </form>
             
@@ -184,8 +186,8 @@
             
             <form>
                 <h2>Log In</h2>
-                <label for="username">Username:</label>
-                <input type="text" id="username2" name="username" placeholder="JohnToTheStars09" required pattern="\S{5,}">
+                <label for="Email">Email*</label>
+                <input type="text" id="username2" name="Email" placeholder="tothe.stars@gmail.com" required>
                 <br>
                 <label for="password1">password:</label>
                 <input type="password" id="password3" name="password1" required pattern="\S{8,}" placeholder="">
@@ -193,7 +195,7 @@
 
                 <a href="forgotPassword.html">Forgot password?</a>
                 
-                <input type="submit">
+                <button id = "loginButton" type="button">Log In</button>
 
             </form>
         </div>
@@ -215,8 +217,10 @@
                 <li><a href="references.html">References</a></li>
             </ul>
         </footer>
-        <script src = "dist/bundle.js"></script>
-  
+        
+    <script type= "module" src="/src/index.js"></script>
+    <script type="module" src="/src/mainTest.js"></script>
+    <script type ="module" src="/src/loginTest.js"></script>
       
 </body> 
 </html>
