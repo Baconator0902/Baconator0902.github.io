@@ -9,6 +9,7 @@
     <link href="/favicon.ico" type="image/x-icon" rel="icon" />
     <script src="js/navbar.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet"> 
     <script src="js/signUpLogin.js"></script>
@@ -25,10 +26,19 @@
             padding: 0;
         }
 
+        .buttonToAnimate {
+                height: 10vh;
+                width: 90%;
+                margin-top: 5vh;
+            }
+
+            
+
         @media only screen and (max-width: 1600px) {
             main {
                 display: block;
             }
+            
             button {
                 height: 30vh;
                 width: 30vw;
@@ -41,13 +51,14 @@
             }
             #logInButtons {
                 width: 100%;
+                height: 20vh;
                 padding-left: 0;
                 padding-right: 0;
             }
     
             #logInButtons > * {
-                width: 60vw;
-                height: 10vh;
+                width: 50%;
+                height: 15vh;
                 margin-left: auto;
                 margin-right: auto;
                 padding: 0;
@@ -67,6 +78,7 @@
             }
             #logInButtons {
                 position: relative;
+                height: 20vh;
                 width: 100%;
             }
     
@@ -176,7 +188,7 @@
                     <input type="checkbox" id="termsAndConditions" style="padding: 0; margin: 0; position: relative; vertical-align:middle; width:fit-content" name="termsAndConditions" required> 
                 </span> 
                 <!--<input type="submit" id ='signUp' name = "signup_submit" value = "Sign Up">-->
-                <button id = "submitButton" type="button">Sign Up</button>
+                <button id = "submitButton" class="buttonToAnimate" type="button">Sign Up</button>
                 
             </form>
             
@@ -195,7 +207,7 @@
 
                 <a href="forgotPassword.html">Forgot password?</a>
                 
-                <button id = "loginButton" type="button">Log In</button>
+                <button id = "loginButton" class="buttonToAnimate" type="button">Log In</button>
 
             </form>
         </div>
@@ -210,7 +222,7 @@
     </div>
 </main>
 
-        <footer>
+        <footer id="footer">
             <ul>
                 <li>Copyright 2023</li>
                 <li><a href="FAQ.html">FAQ</a></li>
@@ -221,6 +233,31 @@
     <script type= "module" src="/src/index.js"></script>
     <script type="module" src="/src/mainTest.js"></script>
     <script type ="module" src="/src/loginTest.js"></script>
+
+    <script>
+        $(":button").bind("webkitAnimationEnd mozAnimationEnd animationend", function(){
+        $(this).removeClass("underlineBox")  
+        })
+
+        $(":button").hover(function(){
+        $(this).addClass("underlineBox");        
+        })
+    </script>
+
+<script id="footerandnavanimations">
+    var elementsInNavToAnimate = $("#navBar").children().children().children();
+    var footerElementsToAnimate = $("#footer").children().children().children();
+    console.log(footerElementsToAnimate);
+    var toAnimate = $(elementsInNavToAnimate).add(footerElementsToAnimate);
+    console.log(toAnimate);
+    toAnimate.bind("webkitAnimationEnd mozAnimationEnd animationend", function(){
+    $(this).removeClass("navAnimation");
+})
+
+toAnimate.hover(function(){
+    $(this).addClass("navAnimation");        
+})
+</script>
       
 </body> 
 </html>

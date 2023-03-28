@@ -149,10 +149,6 @@ ul {
     text-decoration: none;
   }
   
-  li a:hover {
-    font-weight: bold;
-    font-size: 120%;
-  }
 
   nav > ul > li {
     font-size: 2em !important;
@@ -244,10 +240,6 @@ section:nth-child(odd) {
 
 section:nth-child(even) {
   background-color: #FFF1E7;
-<<<<<<< HEAD
-=======
-
->>>>>>> 834e30d (asdf)
 } 
 
 .flickity-button {
@@ -260,3 +252,28 @@ section:nth-child(even) {
   border-radius: 5px;
 }
 
+/*animations*/
+
+.underlineBox {
+  animation: underlineBoxAnimation 1s ease-in-out 0s;
+  animation-fill-mode: forwards;  
+}
+
+@keyframes underlineBoxAnimation {
+  0%   {text-decoration: none;}
+  50% {text-decoration: underline dotted black; font-size: 50px;}
+  75% {text-decoration: underline dotted black; font-size: 50px;}
+  100%   {text-decoration: none} 
+  }
+
+  .navAnimation {
+    animation: animationforNav 1s ease-in-out 0s;
+    animation-fill-mode: forwards;  
+  }
+
+@keyframes animationforNav {
+  0%   {text-decoration: none;}
+  50% {text-decoration: underline dotted black; transform: scale(1.2);}
+  75% {text-decoration: underline dotted black; transform: scale(1.2);}
+  100%   {text-decoration: none} 
+  }
