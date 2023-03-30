@@ -71,6 +71,9 @@ nav {
   height: 15vh;
 }
 
+nav > ul > img {
+  transition: scale 0.5s ease-in-out;
+}
 nav > ul > img:hover {
   transform: scale(1.1);
 }
@@ -255,25 +258,28 @@ section:nth-child(even) {
 /*animations*/
 
 .underlineBox {
-  animation: underlineBoxAnimation 1s ease-in-out 0s;
-  animation-fill-mode: forwards;  
+  transition: text-decoration 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+.underlineBox:hover {
+  text-decoration: underline dotted black; 
+  transform: scale(1.3, 1.1);
 }
 
-@keyframes underlineBoxAnimation {
-  0%   {text-decoration: none;}
-  50% {text-decoration: underline dotted black; font-size: 50px;}
-  75% {text-decoration: underline dotted black; font-size: 50px;}
-  100%   {text-decoration: none} 
-  }
+button {
+  transition: text-decoration 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+button:hover {
+  text-decoration: underline dotted black; 
+  transform: scale(1.2, 1.1);
+}
 
   .navAnimation {
-    animation: animationforNav 1s ease-in-out 0s;
-    animation-fill-mode: forwards;  
+    transition: text-decoration 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
   }
-
-@keyframes animationforNav {
-  0%   {text-decoration: none;}
-  50% {text-decoration: underline dotted black; transform: scale(1.2);}
-  75% {text-decoration: underline dotted black; transform: scale(1.2);}
-  100%   {text-decoration: none} 
-  }
+  .navAnimation:hover {
+    text-decoration: underline dotted black; 
+    transform: scale(1.3, 1.1);
+}

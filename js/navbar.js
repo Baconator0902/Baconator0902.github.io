@@ -16,4 +16,3 @@ function  hideNav(id) {
 function MovetoIndex() {
     window.location = "index.html";
 }
-

@@ -332,6 +332,21 @@
         $(this).addClass("navAnimation");        
     })
     </script>
+    <script>
+        checkUser();
+        function checkUser() {
+            var userLoggedIn = false; //MARALDO THIS IS WHERE YOU CHECK THE USER
+            var signInButton = $("#navBar").children().children().last().children();
+            if (userLoggedIn) {
+                $(signInButton).text("Profile");
+                $(signInButton).attr("href", "profile.html");
+            } else {
+                $(signInButton).text("Sign up/Log in");
+                $(signInButton).attr("href", "signUpLogin.html");
+            }
+        
+}
+    </script>
     <script src="js/home.js"></script>
 </body>
 </html>
