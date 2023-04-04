@@ -18,8 +18,9 @@ function onClickFunction2() {
    signInWithEmailAndPassword(auth2, email, password)
     .then((userCredential) => {
 // Signed in 
-    const user = userCredential.user;
-    window.location.replace("http://127.0.0.1:5500/index.html");
+    var user = userCredential.user;
+    console.log(user);
+   // window.location.replace("http://127.0.0.1:5500/index.html");
 // ...
  })
 .catch((error) => {

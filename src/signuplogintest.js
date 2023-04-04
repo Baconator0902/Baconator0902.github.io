@@ -8,7 +8,8 @@ const firebaseConfig = {
     storageBucket: "testig-5d6e8.appspot.com",
     messagingSenderId: "473419932004",
     appId: "1:473419932004:web:93cb34a413515c7a555a71",
-    measurementId: "G-G1KR8MTGKL"
+    measurementId: "G-G1KR8MTGKL",
+    databaseURL: 'https://testig-5d6e8-default-rtdb.firebaseio.com/'
   };
   
   // Initialize Firebase

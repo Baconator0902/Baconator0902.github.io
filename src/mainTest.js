@@ -15,7 +15,8 @@
            createUserWithEmailAndPassword(auth2, email, password)
             .then((userCredential) => {
     // Signed in 
-            const user = userCredential.user;
+            var user = userCredential.user;
+            console.log(user);
             set(ref(database, 'users/' + user.uid),{
                 email: email,
             });
