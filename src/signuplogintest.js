@@ -16,22 +16,5 @@ const firebaseConfig = {
   export const firebaseApp = initializeApp(firebaseConfig);
   export const auth = getAuth(firebaseApp);
   export const database = getDatabase(firebaseApp);
-  
- /* function signUp(){
-    
-     var email = document.getElementById("email");
-     var password = document.getElementById("password1");
-     createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
- // Signed in 
- const user = userCredential.user;
- console.log(user);
- // ...
-})
-.catch((error) => {
- const errorCode = error.code;
- const errorMessage = error.message;
- // ..
-});
- }
- */
 
+  
