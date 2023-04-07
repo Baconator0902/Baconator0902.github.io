@@ -101,7 +101,7 @@ nav > * {
 
 footer {
   height: 20vh;
-  background-image: url("/images/LandingPageBackground.svg");
+  background-image: url("/images/states/HeaderandFooter.svg");
 
 }
 
@@ -157,7 +157,7 @@ ul {
   }
 
 #navBackground {
-  background-image: url("/images/LandingPageBackground.svg");
+  background-image: url("/images/states/HeaderandFooter.svg");
     height: 200px;
     width: 100%;
     padding: 0;
