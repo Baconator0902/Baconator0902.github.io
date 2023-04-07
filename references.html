@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen and (max-width: 1600px)" href="css/phone.css">
     <link rel="stylesheet" media="screen and (min-width: 1600px)" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="js/navbar.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -87,6 +88,7 @@
             </li>
             <li><p>“Orion Overview.” NASA, 2011, www.nasa.gov/exploration/systems/orion/about/index.html.</p>
             </li>
+            
             <li><p>Sauer, Richard, and David Calley. “S6ch4.” History.nasa.gov, history.nasa.gov/SP-368/s6ch4.htm.</p>
             </li>
             <li><p>Solis, Nathan. “Scientists See Profit in Removing Greenhouse Gases.” Www.courthousenews.com, 20 May 2019, www.courthousenews.com/scientists-see-profit-in-removing-greenhouse-gases/. Accessed 6 Dec. 2022.</p>
@@ -99,17 +101,84 @@
             </li>
             <li><p>“What Is Orion?” NASA, 2015, www.nasa.gov/audience/forstudents/5-8/features/nasa-knows/what-is-orion-58.html.</p>
             </li>
+            <li>
+                <p id="testingP">
+
+                </p>
+            </li>
+            
             <li><p>hiting, Melanie, and Laurie Abadie. “5 Hazards of Human Spaceflight.” NASA, NASA, 8 May 2019, www.nasa.gov/hrp/5-hazards-of-human-spaceflight.</p>
             </li>
         </ul>
     </main>
 
-    <footer>
+    <footer id="footer">
         <ul>
             <li>Copyright 2023</li>
             <li><a href="FAQ.html">FAQ</a></li>
             <li><a href="references.html">References</a></li>
         </ul>
     </footer>
+
+    <script>
+        var testText = $('#testingP');
+        var windowHeight = $( window ).height();
+        var eTop = testText.offset().top;
+        var displayed = true; 
+        
+        $( window ).on('load', function() {
+            if (((eTop - $( window ).scrollTop()) / windowHeight) > 1) {
+                testText.css('opacity', '0');
+                var displayed = false; 
+            }
+            else {
+                testText.css('opacity', '1');
+                var displayed = true;
+            }
+        })
+
+
+        
+        $(function() {
+            var windowHeight = $( window ).height();
+                var testText = $('#testingP');
+                var eTop = testText.offset().top; 
+                 //position of the ele w.r.t window
+
+                 $(window).scroll( function() { //when window is scrolled
+                    console.log((eTop - $(window).scrollTop()) / windowHeight);
+
+                    if (((eTop - $(window).scrollTop()) / windowHeight) > 0.8 && displayed == true) {
+                        displayed = false;
+                        testText.css('opacity', '0');
+                    } else if (((eTop - $(window).scrollTop()) / windowHeight) < 0.8 && displayed == false) {
+                        displayed = true;
+                        testText.fadeToggle();
+                    }
+                        testText.text((eTop - $(window).scrollTop()) / windowHeight);
+            });
+        });
+
+        
+        
+        var allElements = $("*");
+        console.log(allElements);
+        var position = testText.position();
+    </script>
+
+<script id="footerandnavanimations">
+    var elementsInNavToAnimate = $("#navBar").children().children().children();
+    var footerElementsToAnimate = $("#footer").children().children().children();
+    console.log(footerElementsToAnimate);
+    var toAnimate = $(elementsInNavToAnimate).add(footerElementsToAnimate);
+    console.log(toAnimate);
+    toAnimate.bind("webkitAnimationEnd mozAnimationEnd animationend", function(){
+    $(this).removeClass("navAnimation");
+})
+
+toAnimate.hover(function(){
+    $(this).addClass("navAnimation");        
+})
+</script>
 </body>
 </html>

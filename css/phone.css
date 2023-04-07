@@ -76,14 +76,10 @@ nav {
   padding-right: 5vw;
 }
 
-nav > ul > img:hover {
-  transform: scale(1.1);
-}
-
 nav > ul {
     display: grid;
     height: 100%;
-    grid-template-columns: 15vw 15vw 15vw 15vw 15vw 20vw;
+    grid-template-columns: 20vw 15vw 15vw 15vw 15vw 15vw;
 }
 
 nav * {
@@ -155,10 +151,6 @@ ul {
     text-decoration: none;
   }
   
-  li a:hover {
-    font-weight: bold;
-    font-size: 120%;
-  }
 
   nav > ul > li {
     font-size: 2em !important;
@@ -297,11 +289,11 @@ html {
 nav * {
   padding: 0;
   margin: 0;
-  font-size: 18px;
+  font-size: 26px;
 }
 
 footer * {
   padding: 0;
   margin: 0;
-  font-size: 18px;
+  font-size: 26px;
 }

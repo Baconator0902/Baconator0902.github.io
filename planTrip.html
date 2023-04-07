@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/model.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet"> 
     <script src="js/planTrip.js"></script>
     <title>trip</title>
@@ -205,12 +206,27 @@
 
     
     
-    <footer>
+    <footer id="footer">
         <ul>
             <li>Copyright 2023</li>
             <li><a href="FAQ.html">FAQ</a></li>
             <li><a href="references.html">References</a></li>
         </ul>
     </footer>
+
+    <script id="footerandnavanimations">
+        var elementsInNavToAnimate = $("#navBar").children().children().children();
+        var footerElementsToAnimate = $("#footer").children().children().children();
+        console.log(footerElementsToAnimate);
+        var toAnimate = $(elementsInNavToAnimate).add(footerElementsToAnimate);
+        console.log(toAnimate);
+        toAnimate.bind("webkitAnimationEnd mozAnimationEnd animationend", function(){
+        $(this).removeClass("navAnimation");
+    })
+
+    toAnimate.hover(function(){
+        $(this).addClass("navAnimation");        
+    })
+    </script>
 </body>
 </html>

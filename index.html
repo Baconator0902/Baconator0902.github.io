@@ -310,13 +310,44 @@
 
 
 
-    <footer>
+    <footer id="footer">
         <ul>
             <li id="footerCopyright">Copyright 2023</li>
             <li><a href="FAQ.html">FAQ</a></li>
             <li><a href="references.html">References</a></li>
         </ul>
     </footer>
+
+    <script id="footerandnavanimations">
+        var elementsInNavToAnimate = $("#navBar").children().children().children();
+        var footerElementsToAnimate = $("#footer").children().children().children();
+        console.log(footerElementsToAnimate);
+        var toAnimate = $(elementsInNavToAnimate).add(footerElementsToAnimate);
+        console.log(toAnimate);
+        toAnimate.bind("webkitAnimationEnd mozAnimationEnd animationend", function(){
+        $(this).removeClass("navAnimation");
+    })
+
+    toAnimate.hover(function(){
+        $(this).addClass("navAnimation");        
+    })
+    </script>
+    <script>
+        checkUser();
+        function checkUser() {
+            var userLoggedIn = false; //MARALDO THIS IS WHERE YOU CHECK THE USER
+            var signInButton = $("#navBar").children().children().last().children();
+            if (userLoggedIn) {
+                $(signInButton).text("Profile");
+                $(signInButton).attr("href", "profile.html");
+            } else {
+                $(signInButton).text("Sign up/Log in");
+                $(signInButton).attr("href", "signUpLogin.html");
+            }
+        
+}
+    </script>
     <script src="js/home.js"></script>
+    <script type="module" src="src/test.js"></script>
 </body>
 </html>
