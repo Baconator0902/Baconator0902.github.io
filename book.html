@@ -24,6 +24,9 @@
             margin-left: 15vw;
             position: relative;
         }
+        input[type="radio"] {
+            width: 5vw;
+        }
 
         h2, label {
             color: rgb(170, 86, 23);
@@ -34,8 +37,13 @@
                 display: block;
             }
             #buttonsDropDowns {
-                display: flex;
-                justify-content: space-around;
+                display:block;
+            }
+            #buttonsDropDowns * {
+                display:block;
+                height: fit-content;
+                width: 75vw;
+                margin-top: 5vh;
             }
 
             button {
@@ -93,7 +101,7 @@
         
         <nav id="navBar">
             <ul>
-                <img src="/images/TotheStarsHomeLogo.svg" style="height: 10vh; padding: 0; top: 0; cursor: pointer;" onclick="MovetoIndex()">
+                <img src="/images/states/TotheStarsLogo.svg" style="height: 10vh; padding: 0; top: 0; cursor: pointer;" onclick="MovetoIndex()">
                     
                 <li>
                     <a href="info.html">Travel Requirements</a>

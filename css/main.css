@@ -142,6 +142,10 @@ ul {
   li {
     float: left;
   }
+
+  a:hover {
+    color: #0000EE;
+  }
   
   li a {
     color: #EFE8CC;
