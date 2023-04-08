@@ -1,8 +1,5 @@
+        import initialized, {createUserWithEmailAndPassword, onAuthStateChanged, set, ref } from "./firebaseInit";
 
-        import{auth, database} from '/src/signuplogintest.js';
-        import{createUserWithEmailAndPassword, onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
-        import{set, ref} from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js';
-        import{setPersistence, browserSessionPersistence} from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
         var submitButton = document.getElementById("submitButton");
         console.log(submitButton);
         var auth2 = auth;
