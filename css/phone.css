@@ -100,12 +100,8 @@ nav > * {
 }
 
 footer {
-<<<<<<< HEAD
   height: 20vh;
   background-image: url("/images/states/HeaderandFooter.svg");
-=======
-  background-image: url("/images/LandingPageBackground.svg");
->>>>>>> 9745004 (a)
 
 }
 
@@ -212,6 +208,9 @@ input[type="radio"], input[type="file"] {
 }
 input[type="radio"] {
   width: 5vw;
+}
+input[type="file"] {
+  font-size: 16px;
 }
 
 
