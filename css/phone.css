@@ -100,18 +100,26 @@ nav > * {
 }
 
 footer {
+<<<<<<< HEAD
   height: 20vh;
   background-image: url("/images/states/HeaderandFooter.svg");
+=======
+  background-image: url("/images/LandingPageBackground.svg");
+>>>>>>> 9745004 (a)
 
 }
 
 footer > ul {
+  padding: 0;
+  margin: 0;
+  height: fit-content;
   display: grid;
   grid-template-columns: 50% 20% 20% 10%;
   
 }
 
 footer > ul:nth-child(1) {
+  
   grid-column: 1;
 }
 
@@ -147,7 +155,7 @@ ul {
     margin: 0;
     display: block;
     text-align: center;
-    padding: 16px;
+    padding: 0;
     text-decoration: none;
   }
   
@@ -189,6 +197,8 @@ form > h2 {
 }
 
 input {
+
+  transition: border-color 0.5s ease-in-out;
   color: black;
   margin-top: 20px;
   border: 1px solid black;
@@ -200,6 +210,10 @@ input {
 input[type="radio"], input[type="file"] {
   margin-left: 70px;
 }
+input[type="radio"] {
+  width: 5vw;
+}
+
 
 input[type="file"]::before {
   content: "\a";
