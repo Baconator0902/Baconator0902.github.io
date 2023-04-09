@@ -100,12 +100,8 @@ nav > * {
 }
 
 footer {
-<<<<<<< HEAD
   height: 20vh;
   background-image: url("/images/states/HeaderandFooter.svg");
-=======
-  background-image: url("/images/LandingPageBackground.svg");
->>>>>>> 9745004 (a)
 
 }
 
