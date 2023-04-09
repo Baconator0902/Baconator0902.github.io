@@ -52,6 +52,12 @@
           }
 
           @media only screen and (max-width: 1600px) {
+            #learnMore {
+                height: 90vh;
+            }
+            #whyUs {
+                height: 80vh;
+            }
             #topHead, #leftTable, #rightTable, #places, #highlights {
                 display: block;
             }
@@ -75,6 +81,14 @@
             }
           }
           @media only screen and (min-width: 1600px) {
+            #learnMore {
+                min-height: 30vh; 
+                height: 50vh;
+            }
+            #whyUs {
+                min-height: 30vh; 
+                height: 40vh;
+            }
             #topHead, #leftTable, #rightTable, #places, #highlights {
                 display: grid;
             }
@@ -293,13 +307,13 @@
                     </div>
                      
                 </section>
-                <section style="min-height: 30vh; height: 40vh;">
+                <section id="whyUs">
                     <h2>Why us?</h2>
                     <p>At To the Stars, we are dedicated to providing all of our customers with the best possible individualized experiences. From our state-of-the-art spacecraft, to our highly trained crew, our number one priority is making your experience truly the journey of a lifetime. Discover the beauty of space like never before, and begin your personalized journey there with us today either through email, or in-person at one of our locations!
                     </p>
                     </section>
             
-                <section style="min-height: 30vh; height: 50vh;">
+                <section id="learnMore">
                     <h2>Learn More</h2>
                     <p>Click<a href="safety.html">Here</a>to learn more about our safety policies!</p>
                     <p>Click<a href="info.html">Here</a>to learn more about our travel requirements!</p>

@@ -213,6 +213,9 @@ input[type="radio"], input[type="file"] {
 input[type="radio"] {
   width: 5vw;
 }
+input[type="file"] {
+  font-size: 16px;
+}
 
 
 input[type="file"]::before {
