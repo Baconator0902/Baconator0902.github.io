@@ -201,8 +201,8 @@
                             <label for="astro_phys">Astronaut Physical</label>
                             <input type="file" id="astro_phys">
                             <br>
-                            <input type="submit" onclick="tripBooked()">
-            
+                            <input id="bookSubmit" type="submit" onclick="tripBooked()">
+                              
                         </form>
                     </div>
             
@@ -231,7 +231,7 @@
                             <label for="astro_phys">Astronaut Physical</label>
                             <input type="file" id="astro_phys">
                             <br>
-                            <input type="submit" onclick="trainingSubmitted()">
+                            <input id = "trainingSubmit" type="submit" onclick="trainingSubmitted()">
             
                         </form>
                     </div>
@@ -259,7 +259,7 @@
                             <label for="covid_test">Proof of Covid Screening</label>
                             <input type="file" id="covid_test">
                             <br>
-                            <input type="submit" onclick="physicalSubmitted()">
+                            <input id="physicalSubmit" type="submit" onclick="physicalSubmitted()">
             
                         </form>
                     </div>
@@ -280,7 +280,7 @@
         </footer>
         <script type = "module" src = "src/firebaseInit.js"></script>
         <script type="module" src="src/navbarController.js"></script>
-
+        <script type="module" src="src/bookingsandSuch.js"></script>
     
         <script>
             $(":button").bind("webkitAnimationEnd mozAnimationEnd animationend", function(){
