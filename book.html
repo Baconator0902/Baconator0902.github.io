@@ -160,7 +160,7 @@
                             <label for="party_size">Party size</label>
                             <input type="number" id="party_size" name="party_size" min="1" max="5" value="1" required>
                             <br>
-                            <label for="date">Approximate Date</label>
+                            <label for="date">Planned Launch Date</label>
                             <input type="date" id="date" name="date" required>
                             <br>
                             <label for="trip_length">Trip Length (days)</label>
@@ -201,8 +201,8 @@
                             <label for="astro_phys">Astronaut Physical</label>
                             <input type="file" id="astro_phys">
                             <br>
-                            <input type="submit" onclick="tripBooked()">
-            
+                            <input id="bookSubmit" type="submit" >
+                              <!--onclick="tripBooked()"-->
                         </form>
                     </div>
             
@@ -231,7 +231,7 @@
                             <label for="astro_phys">Astronaut Physical</label>
                             <input type="file" id="astro_phys">
                             <br>
-                            <input type="submit" onclick="trainingSubmitted()">
+                            <input id = "trainingSubmit" type="submit" onclick="trainingSubmitted()">
             
                         </form>
                     </div>
@@ -259,7 +259,7 @@
                             <label for="covid_test">Proof of Covid Screening</label>
                             <input type="file" id="covid_test">
                             <br>
-                            <input type="submit" onclick="physicalSubmitted()">
+                            <input id="physicalSubmit" type="submit" onclick="physicalSubmitted()">
             
                         </form>
                     </div>
@@ -278,7 +278,10 @@
                 <li><a href="references.html">References</a></li>
             </ul>
         </footer>
-
+        <script type = "module" src = "src/firebaseInit.js"></script>
+        <script type="module" src="src/navbarController.js"></script>
+        <script type="module" src="src/bookingsandSuch.js"></script>
+    
         <script>
             $(":button").bind("webkitAnimationEnd mozAnimationEnd animationend", function(){
             $(this).removeClass("animateBookButtons");

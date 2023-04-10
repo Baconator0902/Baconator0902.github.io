@@ -39,16 +39,16 @@
             }
             #threeSystems {
                 display: block;
-                height: 200vh;
+                height: 230vh;
                 grid-template-columns: 40vw 50vw;
                 grid-template-rows: 50vh 50vh 50vh;
-                column-gap: 10vh;
+                row-gap: 10vh;
             }
             #bottomTable {
-                height: 650vh;
+                height: 770vh;
                 grid-template-columns: 40vw 60vw;
                 grid-template-rows: 150vh 150vh 150vh 150vh;
-                column-gap: 10vh;
+                row-gap: 10vh;
             }
           }
           @media only screen and (min-width: 1600px) {
@@ -57,16 +57,16 @@
             }
             #threeSystems {
                 display: grid;
-                height: 200vh;
+                height: 250vh;
                 grid-template-columns: 40vw 50vw;
                 grid-template-rows: 50vh 50vh 50vh;
-                column-gap: 10vh;
+                row-gap: 10vh;
             }
             #bottomTable {
                 height: 290vh;
                 grid-template-columns: 40vw 60vw;
                 grid-template-rows: 75vh 75vh 75vh 75vh;
-                column-gap: 10vh;
+                row-gap: 10vh;
             }
           }
         
@@ -207,7 +207,10 @@
                 <li><a href="references.html">References</a></li>
             </ul>
         </footer>
-
+        <script type = "module" src = "src/firebaseInit.js"></script>
+        <script type="module" src="src/navbarController.js"></script>
+        
+    
         <script id="footerandnavanimations">
             var elementsInNavToAnimate = $("#navBar").children().children().children();
             var footerElementsToAnimate = $("#footer").children().children().children();

@@ -68,7 +68,6 @@ img {
 
 nav {
   top: 0;
-  height: 15vh;
 }
 
 nav > ul > img {
@@ -80,7 +79,6 @@ nav > ul > img:hover {
 
 nav > ul {
     display: grid;
-    height: 100%;
     grid-template-columns: 25vw 15vw 15vw 15vw 15vw 15vw;
 }
 
@@ -103,8 +101,12 @@ nav > * {
 }
 
 footer {
+<<<<<<< HEAD
   height: 20vh;
   background-image: url("/images/states/HeaderandFooter.svg");
+=======
+  background-image: url("/images/LandingPageBackground.svg");
+>>>>>>> 9745004 (a)
 }
 
 footer > ul {
@@ -152,7 +154,7 @@ ul {
     margin: 0;
     display: block;
     text-align: center;
-    padding: 16px;
+    padding: 0;
     text-decoration: none;
   }
   
@@ -194,6 +196,7 @@ form > h2 {
 }
 
 input {
+  transition: border-color 0.5s ease-in-out;
   color: black;
   margin-top: 20px;
   border: 1px solid black;
@@ -204,6 +207,10 @@ input {
 
 input[type="radio"], input[type="file"] {
   margin-left: 70px;
+}
+
+input[type="radio"] {
+  width: 5vw;
 }
 
 input[type="file"]::before {
