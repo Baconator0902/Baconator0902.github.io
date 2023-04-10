@@ -37,13 +37,16 @@
             }
             button {
                 height: 30vh;
-                width: 30vw;
+                width: 50vw;
                 font-size: 20px;
             }
             input {
                 margin-left: auto !important;
                 margin-right: auto !important;
                 width: 60vw;
+            }
+            input [type="radio"] {
+                position: relative;
             }
             #launchLocationLabel {
                 margin-left: 0vw;
@@ -165,6 +168,7 @@
                         <button onclick="planTripFormSubmit()" style="height: fit-content;">Estimate Cost</button>
         
                 <h2 id="predictedCostText" style="display: none;">Your predicted cost is: </h2> 
+                <h2 id="predictedCostText2" style="display: none; color: green; font-size: 4em;"></h2> 
             </section>
         
             <h2 style="background-color: #FFF1E7; margin: 0; padding-top: 10vh;">Costs for Training</h2>
@@ -201,7 +205,7 @@
                             <img src="/images/states/Pilot-In-CommandGraphic.svg">
                         </div>
         
-                        <a href="book.html" style="grid-row: 3; grid-column: 2; font-size: 2em;">Book a trip or training session today!!</a>
+                        <a href="book.html" style="grid-row: 3; grid-column: 2; font-size: 2em;">Book a trip or training session today!</a>
         
             </section>
             
