@@ -5,7 +5,7 @@ onAuthStateChanged(auth, (user) => {
     if (user) {
       // User is signed in, see docs for a list of available properties
       // https://firebase.google.com/docs/reference/js/firebase.User
-      console.log(user);
+
       var signInButton = $("#navBar").children().children().last().children();
           $(signInButton).text("Profile");
           $(signInButton).attr("href", "profile.html");
@@ -13,7 +13,6 @@ onAuthStateChanged(auth, (user) => {
 
 
     } else {
-    console.log("No one to see here");
     var signInButton = $("#navBar").children().children().last().children();
       $(signInButton).text("Sign up/Log in");
         $(signInButton).attr("href", "signUpLogin.html");
