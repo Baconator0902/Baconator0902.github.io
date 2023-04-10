@@ -1,3 +1,4 @@
+/* eslint no-unused-vars: "off"*/
 const functions = require("firebase-functions");
 
 // // Create and deploy your first functions
