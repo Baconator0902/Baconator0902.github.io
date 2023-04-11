@@ -26,12 +26,12 @@ function onClickFunction(){
                 var uid = user.uid;
                 set(ref(database, 'users/' + uid),{
                     firstname: firstName,
-                    bookedTripDate: "N/A",
-                    partySize: "N/A",
-                    cost: "N/A",
+                  //  bookedTripDate: "N/A",
+                   // partySize: "N/A",
+                    //cost: "N/A",
                     
                 })
-                .then(()=>{       window.location.replace("http://127.0.0.1:5500/index.html");});
+                .then(()=>{       window.location.replace("./index.html");});
         
             } else {
             

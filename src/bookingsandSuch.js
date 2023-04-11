@@ -1,7 +1,7 @@
 
 import{auth, database} from '/src/firebaseInit.js';
 import{ onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
-import { getDatabase, ref, child, push, update } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
+import { set, ref, child, push, update } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
 var bookButton =  document.getElementById("bookSubmit");
 console.log(bookButton);
 var trainingButton =  document.getElementById("trainingSubmit");
@@ -10,28 +10,22 @@ var physicalButton =  document.getElementById("physicalSubmit");
 console.log(physicalButton);
 
 function onClickBookATrip(){
-    onAuthStateChanged(auth, (user) => {
-        
-        if (user) {
-          const startDate = document.getElementById("date")
+      console.log("before");
+      const user = auth.currentUser;
+      if (user) {
+          var startDate = document.getElementById("date1");
           var uid = user.uid;
-           const updateBookTrip = {
-                bookedTripDate : startDate.value
-           }
-        
-           const newPostKey = push(child(ref(database), 'posts')).key;
-           
-           const updates = {};
-           updates['/posts/' + newPostKey] = updateBookTrip;
-         updates['users/' + uid + '/' + newPostKey] = updateBookTrip;
+          console.log(uid + " LOOK CLOSELY");
+          set(ref(database, 'trips/' + uid),{
+           tripDate : startDate,  
+        })
+        .then(()=>{window.location.replace("./index.html");}, err => {console.error(err)});
 
-        return update(ref(database), updates);
 
-            
         } else {
-        
+
         }
-    });
+    
 
 }
 function onClickBookATraining(){
