@@ -61,7 +61,7 @@ function onClickFunction2() {
         if (user) {
           // User is signed in, see docs for a list of available properties
           // https://firebase.google.com/docs/reference/js/firebase.User
-          window.location.replace("http://127.0.0.1:5500/index.html");
+          window.location.replace("./index.html");
           
 
     

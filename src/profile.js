@@ -9,7 +9,7 @@ return onValue(ref(database, 'users/' + userId), (snapshot) => {
     const firstName = (snapshot.val() && snapshot.val().firstname);
     console.log(firstName);
     const tripStart = (snapshot.val() && snapshot.val().bookedTripDate);
-    document.getElementById("username").innerHTML = "Welcome: " + firstName;
+    document.getElementById("username").innerHTML = "Welcome " + firstName;
     if(tripStart != "N/A"){
     document.getElementById("bookingText").innerHTML = "You have a trip booked with the start date of: " + tripStart;
     }
