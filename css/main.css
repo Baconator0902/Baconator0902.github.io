@@ -4,7 +4,7 @@
     padding: 20px;
     font-style: normal;
     font-weight: 400;
-    color: #231F20;
+    color: rgb(170, 86, 23);
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
@@ -101,12 +101,8 @@ nav > * {
 }
 
 footer {
-<<<<<<< HEAD
   height: 20vh;
   background-image: url("/images/states/HeaderandFooter.svg");
-=======
-  background-image: url("/images/LandingPageBackground.svg");
->>>>>>> 9745004 (a)
 }
 
 footer > ul {
