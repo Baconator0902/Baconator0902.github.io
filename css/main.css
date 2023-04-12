@@ -98,7 +98,7 @@ nav > * > * {
 }
 
 footer {
-  height: 20vh;
+  padding: 0;
   background-image: url("/images/states/HeaderandFooter.svg");
 }
 
