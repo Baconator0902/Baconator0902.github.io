@@ -88,15 +88,12 @@ nav * {
   padding: 0;
 }
 
-nav > * {
+nav > * > * {
   font-size: 0.75em;
   margin-right: 0 !important;
   position: relative;
-  top: 20px;
   margin-top: auto;
   margin-bottom: auto;
-  padding-top: 25%;
-  padding-bottom: 25%;
   text-transform: uppercase;
 }
 

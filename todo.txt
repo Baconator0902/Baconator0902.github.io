@@ -1,4 +1,0 @@
-
-1. Vertically center headers and footers
-
-

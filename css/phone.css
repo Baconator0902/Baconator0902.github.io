@@ -40,7 +40,7 @@ h4 {
 }
 
 p, label {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 li {
@@ -72,8 +72,6 @@ nav img {
 
 nav {
   top: 0;
-  height: 15vh;
-  padding-right: 5vw;
 }
 
 nav > ul {
@@ -88,14 +86,12 @@ nav * {
   padding: 0;
 }
 
-nav > * {
+nav > * > * {
+  font-size: 0.75em;
   margin-right: 0 !important;
   position: relative;
-  top: 20px;
   margin-top: auto;
   margin-bottom: auto;
-  padding-top: 25%;
-  padding-bottom: 25%;
   text-transform: uppercase;
 }
 
@@ -142,10 +138,6 @@ ul {
     overflow: hidden;
   }
   
-  li {
-    float: left;
-  }
-  
   li a {
     color: #EFE8CC;
     margin: 0;
@@ -160,13 +152,12 @@ ul {
     font-size: 2em !important;
   }
 
-#navBackground {
-  background-image: url("/images/states/HeaderandFooter.svg");
-    height: 200px;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
+  #navBackground {
+    background-image: url("/images/states/HeaderandFooter.svg");
+      width: 100%;
+      padding: 0;
+      margin: 0;
+  }
 
 button {
   color: rgb(170, 86, 23);

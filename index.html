@@ -52,6 +52,14 @@
           }
 
           @media only screen and (max-width: 1600px) {
+            #topHead {
+                background-image: url("/images/states/LandingPageBackground.svg");
+                grid-template-columns:  50vw, 50vw;
+                grid-template-rows: 1fr;
+                z-index: -2;
+                background-repeat: no-repeat;
+                background-size: auto 100%;
+            }
             #learnMore {
                 height: 90vh;
             }
@@ -84,6 +92,14 @@
             }
           }
           @media only screen and (min-width: 1600px) {
+            #topHead {
+                background-image: url("/images/states/LandingPageBackground.svg");
+                grid-template-columns:  50vw, 50vw;
+                grid-template-rows: 1fr;
+                z-index: -2;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
             #learnMore {
                 min-height: 30vh; 
                 height: 50vh;
@@ -97,12 +113,7 @@
             }
           }
 
-        #topHead {
-            background-image: url("/images/states/LandingPageBackground.svg");
-            grid-template-columns:  50vw, 50vw;
-            grid-template-rows: 1fr;
-            z-index: -2;
-        }
+        
 
         #topHead * {
             color: white;
