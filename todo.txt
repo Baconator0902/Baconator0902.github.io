@@ -1,0 +1,2 @@
+1. In safety, Landing procedure has "read more". Should link somewhere?
+2. Vertically center headers and footers
