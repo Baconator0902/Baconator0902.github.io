@@ -51,7 +51,7 @@
                 width: 30vw;
                 font-size: 20px;
             }
-            input {
+            input, #bookSubmit {
                 margin-left: auto !important;
                 margin-right: auto !important;
                 width: 60vw;
@@ -72,7 +72,7 @@
             label {
                 position: absolute;
             }
-            input {
+            input, #bookSubmit {
                 position: relative;
                 margin-left: 15vw;
                 width: 25vw;
@@ -92,6 +92,17 @@
             padding: 0;
             margin: 0;
             margin-top: 20px;
+        }
+
+        #bookSubmit {
+            margin-top: 20px;
+            color: black;
+            border-color: hsl(120, 76%, 50%);
+            
+        }
+        #bookSubmit:hover {
+            text-decoration: none;
+            transform: none;
         }
     </style>
     
@@ -201,7 +212,7 @@
                             <label for="astro_phys">Astronaut Physical</label>
                             <input type="file" id="astro_phys">
                             <br>
-                            <button id = "bookSubmit" class="buttonToAnimate" type="button">Book</button>
+                            <button id = "bookSubmit" type="button">Book</button>
                               <!--onclick="tripBooked()"-->
                         </form>
                     </div>
