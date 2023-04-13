@@ -28,10 +28,10 @@ return onValue(ref(database, 'users/' + userId), (snapshot) => {
             document.getElementById("trainingText").innerHTML = "You currently have no trainings booked";
         }
         if(tripStartP != null){
-            document.getElementById("physicalText").innerHTML = "You have a training booked with the start date of: " + tripStartP + " and a party size of: " + partySizeP;
+            document.getElementById("physicalText").innerHTML = "You have a physical booked with the start date of: " + tripStartP + " and a party size of: " + partySizeP;
             }
             else{
-                document.getElementById("physicalText").innerHTML = "You currently have no trainings booked";
+                document.getElementById("physicalText").innerHTML = "You currently have no phyicals booked";
             }
 },
 {onlyOnce: true}); 
