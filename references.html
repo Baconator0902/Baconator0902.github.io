@@ -149,7 +149,6 @@
                  //position of the ele w.r.t window
 
                  $(window).scroll( function() { //when window is scrolled
-                    console.log((eTop - $(window).scrollTop()) / windowHeight);
 
                     if (((eTop - $(window).scrollTop()) / windowHeight) > 0.8 && displayed == true) {
                         displayed = false;
@@ -165,26 +164,11 @@
         
         
         var allElements = $("*");
-        console.log(allElements);
         var position = testText.position();
     </script>
   <script type = "module" src = "src/firebaseInit.js"></script>
   <script type="module" src="src/navbarController.js"></script>
 
 
-<script id="footerandnavanimations">
-    var elementsInNavToAnimate = $("#navBar").children().children().children();
-    var footerElementsToAnimate = $("#footer").children().children().children();
-    console.log(footerElementsToAnimate);
-    var toAnimate = $(elementsInNavToAnimate).add(footerElementsToAnimate);
-    console.log(toAnimate);
-    toAnimate.bind("webkitAnimationEnd mozAnimationEnd animationend", function(){
-    $(this).removeClass("navAnimation");
-})
-
-toAnimate.hover(function(){
-    $(this).addClass("navAnimation");        
-})
-</script>
 </body>
 </html>
