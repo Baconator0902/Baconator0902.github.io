@@ -16,7 +16,7 @@ function onClickBookATrip(){
           var startDate = document.getElementById("date1");
           var uid = user.uid;
           console.log(uid + " LOOK CLOSELY");
-          set(ref(database, 'trips/' + uid),{
+          update(ref(database, 'users/' + uid),{
            tripDate : startDate,  
         })
         .then(()=>{window.location.replace("./index.html");}, err => {console.error(err)});

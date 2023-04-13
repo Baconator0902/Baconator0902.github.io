@@ -15,7 +15,8 @@ function onClickFunction(){
     
     var signUpPassword = document.getElementById("password1").value;
 
-  
+    var signUpPassword2 = document.getElementById("password2").value;
+    if(signUpPassword2 == signUpPassword){
     createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword).then((userCredential) => {
         var user = userCredential.user;
         console.log(user);
@@ -44,6 +45,10 @@ function onClickFunction(){
 const errorMessage = error.message;
 // ..
      });}
+     else{
+        window.alert("Passwords do not match!");
+     }
+    }
 
 
 function onClickFunction2() {
