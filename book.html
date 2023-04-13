@@ -301,28 +301,5 @@
         <script type="module" src="src/navbarController.js"></script>
         <script type="module" src="src/bookingsandSuch.js"></script>
     
-        <script>
-            $(":button").bind("webkitAnimationEnd mozAnimationEnd animationend", function(){
-            $(this).removeClass("animateBookButtons");
-            })
-    
-            $(":button").hover(function(){
-            $(this).addClass("animateBookButtons");        
-            })
-        </script>
-        <script id="footerandnavanimations">
-            var elementsInNavToAnimate = $("#navBar").children().children().children();
-            var footerElementsToAnimate = $("#footer").children().children().children();
-            console.log(footerElementsToAnimate);
-            var toAnimate = $(elementsInNavToAnimate).add(footerElementsToAnimate);
-            console.log(toAnimate);
-            toAnimate.bind("webkitAnimationEnd mozAnimationEnd animationend", function(){
-            $(this).removeClass("navAnimation");
-        })
-    
-        toAnimate.hover(function(){
-            $(this).addClass("navAnimation");        
-        })
-        </script>
 </body>
 </html>
