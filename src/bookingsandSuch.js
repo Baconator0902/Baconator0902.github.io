@@ -17,16 +17,12 @@ function onClickBookATrip(){
           var partySize = document.getElementById("party_size")
           var uid = user.uid;
         
-          if(startDate != null){
           update(ref(database, 'users/' + uid),{
            tripDateBooked : startDate.value,  
            partySizeBooked : partySize.value,
         })
         .then(()=>{window.location.replace("./index.html");}, err => {console.error(err)});
-    }
-    else{
-        window.alert("Please fill out the required form");
-        }
+  
         } else {
             window.alert("Trip succesfully planned. To save a booking, please create an account and resubmit");
         }
@@ -41,16 +37,13 @@ function onClickBookATraining(){
         var partySizeT = document.getElementById("party_sizeTraining")
         var uid = user.uid;
      
-        if(startDate != null){
+       
         update(ref(database, 'users/' + uid),{
          trainingBooked : startDateT.value,  
          partySizeTrainingBooked : partySizeT.value,
       })
       .then(()=>{window.location.replace("./index.html");}, err => {console.error(err)});
-  }
-  else{
-      window.alert("Please fill out the required form");
-      }
+
       } else {
           window.alert("Training succesfully planned. To save a training, please create an account and resubmit");
       }
@@ -63,16 +56,13 @@ function onClickBookAPhysical(){
         var partySizeP = document.getElementById("party_sizePhysical")
         var uid = user.uid;
      
-        if(startDate != null){
+        
         update(ref(database, 'users/' + uid),{
          physicalBooked : startDateP.value,  
          partySizePhysicalBooked : partySizeP.value,
       })
       .then(()=>{window.location.replace("./index.html");}, err => {console.error(err)});
-  }
-  else{
-      window.alert("Please fill out the required form");
-      }
+
       } else {
           window.alert("Physical succesfully planned. To save this planning, please create an account and resubmit");
       }
