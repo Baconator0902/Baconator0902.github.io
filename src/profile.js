@@ -8,11 +8,31 @@ function getUser(userId){
 return onValue(ref(database, 'users/' + userId), (snapshot) => {
     const firstName = (snapshot.val() && snapshot.val().firstname);
     console.log(firstName);
-    const tripStart = (snapshot.val() && snapshot.val().bookedTripDate);
+    const tripStart = (snapshot.val() && snapshot.val().tripDateBooked);
+    const partySize = (snapshot.val()&& snapshot.val().partySizeBooked);
+    const startDateT = (snapshot.val() && snapshot.val().trainingBooked);
+    const partySizeT = (snapshot.val()&& snapshot.val().partySizeTrainingBooked);
+    const tripStartP = (snapshot.val() && snapshot.val().physicalBooked);
+    const partySizeP = (snapshot.val()&& snapshot.val().partySizePhysicalBooked);
     document.getElementById("username").innerHTML = "Welcome " + firstName;
-    if(tripStart != "N/A"){
-    document.getElementById("bookingText").innerHTML = "You have a trip booked with the start date of: " + tripStart;
+    if(tripStart != null){
+    document.getElementById("bookingText").innerHTML = "You have a trip booked with the start date of: " + tripStart + " and a party size of: " + partySize;
     }
+    else{
+        document.getElementById("bookingText").innerHTML = "You currently have no trips booked";
+    }
+    if(startDateT != null){
+        document.getElementById("trainingText").innerHTML = "You have a training booked with the start date of: " + tripStart + " and a party size of: " + partySizeT;
+        }
+        else{
+            document.getElementById("trainingText").innerHTML = "You currently have no trainings booked";
+        }
+        if(tripStartP != null){
+            document.getElementById("physicalText").innerHTML = "You have a training booked with the start date of: " + tripStartP + " and a party size of: " + partySizeP;
+            }
+            else{
+                document.getElementById("physicalText").innerHTML = "You currently have no trainings booked";
+            }
 },
 {onlyOnce: true}); 
 }
