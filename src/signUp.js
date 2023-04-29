@@ -14,7 +14,6 @@
                  var user = userCredential.user;
                 console.log(user);
                 set(ref(database, 'users/' + user.uid),{
-                    email: email,
                     firstname : firstName,
                 });
                 onAuthStateChanged(auth, (user) => {
