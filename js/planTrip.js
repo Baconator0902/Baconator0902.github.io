@@ -23,9 +23,8 @@ function planTripFormSubmit() {
     }
     costToDisplay = Math.round((cost + Number.EPSILON) * 100) / 100;
 
-    predictedCostText = document.getElementById("predictedCostText2");
-    document.getElementById("predictedCostText").style.display = "block";
+    predictedCostText = document.getElementById("predictedCostText");
     predictedCostText.style.display = "block";
-    predictedCostText.innerHTML = "$" + costToDisplay.toLocaleString("en-US");
+    predictedCostText.innerHTML = "Your predicted cost is: $" + costToDisplay.toLocaleString("en-US");
 
 }
