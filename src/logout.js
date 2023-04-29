@@ -22,3 +22,4 @@ function signOutOnClick(){
       });
 }
 signOutButton.addEventListener('click', signOutOnClick);
+//And this
