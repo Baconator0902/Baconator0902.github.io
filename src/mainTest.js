@@ -1,4 +1,4 @@
-        import initialized, {createUserWithEmailAndPassword, onAuthStateChanged, set, ref } from "./firebaseInit";
+        import initialized, {createUserWithEmailAndPassword, onAuthStateChanged, set, ref } from "./firebaseInit.js";
 
         var submitButton = document.getElementById("submitButton");
         console.log(submitButton);

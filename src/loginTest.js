@@ -1,5 +1,5 @@
 
-import{auth} from '/src/signuplogintest.js';
+import{auth} from './firebaseInit.js';
 import{signInWithEmailAndPassword} from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
 
 

@@ -1,16 +1,13 @@
-        import  {createUserWithEmailAndPassword, onAuthStateChanged, set, ref } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
-       import {auth} from  "./firebaseInit.js";
+        import  {createUserWithEmailAndPassword, onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
+        import { set, ref } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js';
+       import {auth, database} from  "./firebaseInit.js";
 
         var submitButton = document.getElementById("submitButton");
         console.log(submitButton);
         function onClickFunction() {
             var email = document.getElementById("email").value;
             var password = document.getElementById("password1").value;
-            console.log(email);
-            console.log(auth2);
-            console.log(database);
-
-                
+            
                  createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
         // Signed in 

@@ -1,5 +1,5 @@
 
-import{firebaseApp, auth} from '/src/signuplogintest.js';
+import{firebaseApp, auth} from './firebaseInit.js';
 import{getAuth, createUserWithEmailAndPassword} from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
 console.log(firebaseApp);
 console.log(auth);
