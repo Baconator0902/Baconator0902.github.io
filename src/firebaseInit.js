@@ -2,6 +2,10 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.2/firebas
 import { getAuth, setPersistence, browserSessionPersistence } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
 import { getDatabase } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js';
 
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js';
+import { getAuth, setPersistence, browserSessionPersistence } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
+import { getDatabase } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js';
+
 export * from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js';
 export * from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
 export * from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js';
@@ -18,11 +22,9 @@ const firebaseConfig = {
 };
   
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
-const auth = getAuth(firebaseApp);
+export const firebaseApp = initializeApp(firebaseConfig);
+export const auth = getAuth(firebaseApp);
 setPersistence(auth, browserSessionPersistence);
-const database = getDatabase(firebaseApp);
+export const database = getDatabase(firebaseApp);
 
-const initialized = { firebaseApp, auth, database };
 
-export default initialized;
