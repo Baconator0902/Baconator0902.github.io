@@ -7,7 +7,7 @@
         function onClickFunction() {
             var email = document.getElementById("email").value;
             var password = document.getElementById("password1").value;
-            
+            var firstName = document.getElementById("first_name").value;
                  createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
         // Signed in 
@@ -15,6 +15,7 @@
                 console.log(user);
                 set(ref(database, 'users/' + user.uid),{
                     email: email,
+                    firstname : firstName,
                 });
                 onAuthStateChanged(auth, (user) => {
                         if (user) {
