@@ -18,3 +18,4 @@ onAuthStateChanged(auth, (user) => {
         $(signInButton).attr("href", "signUpLogin.html");
     }
 });
+//I wanna keep this too

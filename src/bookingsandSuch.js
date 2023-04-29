@@ -6,6 +6,8 @@ var bookButton =  document.getElementById("bookSubmit");
 var trainingButton =  document.getElementById("trainingSubmit");
 var physicalButton =  document.getElementById("physicalSubmit");
 
+
+//Commit For GITTTT
 function onClickBookATrip(){
 
       const user = auth.currentUser;
