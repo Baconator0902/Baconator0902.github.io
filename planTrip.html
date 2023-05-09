@@ -27,9 +27,7 @@
             flex-direction: row;
             flex-wrap: nowrap;
         }
-        select {
-            width: 5vw;
-        }
+        
 
         @media only screen and (max-width: 1600px) {
             #costsForTraining {
@@ -63,9 +61,6 @@
                 position: relative;
                 margin-left: 15vw;
                 width: 25vw;
-            }
-            #launchLocationLabel {
-                margin-left: 27vw;
             }
           }
         #costsForTraining {
@@ -138,8 +133,7 @@
                         <label for="trip_length">Trip Length (days)</label>
                         <input type="number" id="trip_length" name="trip_length" min="4" max="100" value="10" required>
                         <br>
-                        <label for="launch_location" style="display: block;" id="launchLocationLabel">Launch Location</label>
-                        <br>
+                        <label for="launch_location" id="launchLocationLabel">Launch Location</label>
                         <select id="launch_location" name="launch_location">
                             <option value="111000">USA</option>
                             <option value="64000">RUSSIA</option>

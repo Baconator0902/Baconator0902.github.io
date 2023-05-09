@@ -161,6 +161,7 @@ ul {
       margin: 0;
   }
 
+
 button {
   color: rgb(170, 86, 23);
   cursor: pointer;
@@ -196,10 +197,10 @@ input, select {
   border-radius: 40px;
 }
 
-input[type="radio"], input[type="file"], select {
+input[type="radio"], input[type="file"] {
   margin-left: 70px;
 }
-input[type="radio"], select {
+input[type="radio"] {
   width: 5vw;
 }
 input[type="file"] {

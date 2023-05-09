@@ -36,6 +36,11 @@
             #bookGrid {
                 display: block;
             }
+            input, select {
+                margin-left: auto !important;
+                margin-right: auto !important;
+                width: 60vw;
+            }
             #buttonsDropDowns {
                 display:block;
             }
@@ -58,7 +63,7 @@
                 width: 30vw;
                 font-size: 20px;
             }
-            input, .submitingButtons {
+            input, .submitingButtons, select {
                 margin-left: auto !important;
                 margin-right: auto !important;
                 width: 60vw;
@@ -69,6 +74,11 @@
             #bookGrid {
                 display: grid;
                 grid-template-columns: 50vw 50vw;
+            }
+            input, select {
+                position: relative;
+                margin-left: 15vw;
+                width: 25vw;
             }
             button {
                 width: 25vw;
@@ -186,31 +196,17 @@
                             <label for="trip_length">Trip Length (days)</label>
                             <input type="number" id="trip_length" name="trip_length" min="4" max="100" value="10" required>
                             <br>
-                            <label for="launch_location" style="display: block;">Launch Location</label>
-                            <br>
-                            <input type="radio" id="USA" name="launch_location" value="USA">
-                            <label for="USA" id="launch_location" class="countryLabel">USA</label>
-                            <br>
-                            <input type="radio" id="RUSSIA" name="launch_location" value="RUSSIA">
-                            <label for="RUSSIA" class="countryLabel">RUSSIA</label>
-                            <br>
-                            <input type="radio" id="SPAIN" name="launch_location" value="SPAIN">
-                            <label for="SPAIN" class="countryLabel">SPAIN</label>
-                            <br>
-                            <input type="radio" id="GERMANY" name="launch_location" value="GERMANY">
-                            <label for="GERMANY" class="countryLabel">GERMANY</label>
-                            <br>
-                            <input type="radio" id="FRANCE" name="launch_location" value="FRANCE">
-                            <label for="FRANCE" class="countryLabel">FRANCE</label>
-                            <br>
-                            <input type="radio" id="ITALY" name="launch_location" value="ITALY">
-                            <label for="ITALY" class="countryLabel">ITALY</label>
-                            <br>
-                            <input type="radio" id="INDIA" name="launch_location" value="INDIA">
-                            <label for="INDIA" class="countryLabel">INDIA</label>
-                            <br>
-                            <input type="radio" id="CHINA" name="launch_location" value="CHINA">
-                            <label for="CHINA" class="countryLabel">CHINA</label>
+                            <label for="launch_location" id="launchLocationLabel">Launch Location</label>
+                            <select id="launch_location" name="launch_location">
+                                <option value="USA">USA</option>
+                                <option value="RUSSIA">RUSSIA</option>
+                                <option value="SPAIN">SPAIN</option>
+                                <option value="GERMANY">GERMANY</option>
+                                <option value="FRANCE">FRANCE</option>
+                                <option value="ITALY">ITALY</option>
+                                <option value="INDIA">INDIA</option>
+                                <option value="CHINA">CHINA</option>
+                              </select>
                             <br>
                             <label for="covid_test">Proof of Covid Screening</label>
                             <input type="file" id="covid_test">
