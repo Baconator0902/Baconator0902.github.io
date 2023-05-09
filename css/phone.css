@@ -3,7 +3,7 @@
 html { height: 100%;} body { min-height: 100%; }
 
 * {/*border: 1px solid red;*/
-    padding: 20px;
+    padding: 15px;
     font-style: normal;
     font-weight: 400;
     color: rgb(170, 86, 23);
@@ -49,7 +49,7 @@ li {
   font-size: 1.2em;
 }
 
-input {
+input, select {
   font-size: 1.3em;
 }
 
@@ -185,7 +185,7 @@ form > h2 {
   text-align: center;
 }
 
-input {
+input, select {
 
   transition: border-color 0.5s ease-in-out;
   color: black;
@@ -196,10 +196,10 @@ input {
   border-radius: 40px;
 }
 
-input[type="radio"], input[type="file"] {
+input[type="radio"], input[type="file"], select {
   margin-left: 70px;
 }
-input[type="radio"] {
+input[type="radio"], select {
   width: 5vw;
 }
 input[type="file"] {
@@ -272,7 +272,7 @@ main * {
     display: block;
 }
 
-input {
+input, select {
     margin-left: 40vw !important;
 }
 

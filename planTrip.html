@@ -27,7 +27,7 @@
             flex-direction: row;
             flex-wrap: nowrap;
         }
-        input[type="radio"] {
+        select {
             width: 5vw;
         }
 
@@ -40,12 +40,12 @@
                 width: 50vw;
                 font-size: 20px;
             }
-            input {
+            input, select {
                 margin-left: auto !important;
                 margin-right: auto !important;
                 width: 60vw;
             }
-            input [type="radio"] {
+            select {
                 position: relative;
             }
             #launchLocationLabel {
@@ -59,7 +59,7 @@
             label {
                 position: absolute;
             }
-            input {
+            input, select {
                 position: relative;
                 margin-left: 15vw;
                 width: 25vw;
@@ -140,30 +140,16 @@
                         <br>
                         <label for="launch_location" style="display: block;" id="launchLocationLabel">Launch Location</label>
                         <br>
-                        <input type="radio" id="USA" name="launch_location" value="USA">
-                        <label for="USA" id="launch_location" class="countryLabel">USA</label>
-                        <br>
-                        <input type="radio" id="RUSSIA" name="launch_location" value="RUSSIA">
-                        <label for="RUSSIA" class="countryLabel">RUSSIA</label>
-                        <br>
-                        <input type="radio" id="SPAIN" name="launch_location" value="SPAIN">
-                        <label for="SPAIN" class="countryLabel">SPAIN</label>
-                        <br>
-                        <input type="radio" id="GERMANY" name="launch_location" value="GERMANY">
-                        <label for="GERMANY" class="countryLabel">GERMANY</label>
-                        <br>
-                        <input type="radio" id="FRANCE" name="launch_location" value="FRANCE">
-                        <label for="FRANCE" class="countryLabel">FRANCE</label>
-                        <br>
-                        <input type="radio" id="ITALY" name="launch_location" value="ITALY">
-                        <label for="ITALY" class="countryLabel">ITALY</label>
-                        <br>
-                        <input type="radio" id="INDIA" name="launch_location" value="INDIA">
-                        <label for="INDIA" class="countryLabel">INDIA</label>
-                        <br>
-                        <input type="radio" id="CHINA" name="launch_location" value="CHINA">
-                        <label for="CHINA" class="countryLabel">CHINA</label>
-                        <br>
+                        <select id="launch_location" name="launch_location">
+                            <option value="111000">USA</option>
+                            <option value="64000">RUSSIA</option>
+                            <option value="118000">SPAIN</option>
+                            <option value="124000">GERMANY</option>
+                            <option value="131000">FRANCE</option>
+                            <option value="121000">ITALY</option>
+                            <option value="73000">INDIA</option>
+                            <option value="80000">CHINA</option>
+                          </select>
                         <br>
                         <button onclick="planTripFormSubmit()" style="height: fit-content;">Estimate Cost</button>
         
