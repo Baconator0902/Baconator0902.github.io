@@ -4,7 +4,8 @@
 
         var submitButton = document.getElementById("submitButton");
         console.log(submitButton);
-        function onClickFunction() {
+        function onClickFunction(event) {
+            event.preventDefault();
             var email = document.getElementById("email").value;
             var password = document.getElementById("password1").value;
             var firstName = document.getElementById("first_name").value;
@@ -31,4 +32,4 @@
              });}
            
         
-        submitButton.addEventListener('click', onClickFunction);
+        submitButton.addEventListener('submit', onClickFunction);
