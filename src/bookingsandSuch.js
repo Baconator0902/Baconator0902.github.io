@@ -1,15 +1,18 @@
 
 import{auth, database} from '/src/firebaseInit.js';
-import{ onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
+
 import { set, ref, child, push, update } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
 var bookButton =  document.getElementById("bookSubmit");
 var trainingButton =  document.getElementById("trainingSubmit");
 var physicalButton =  document.getElementById("physicalSubmit");
 
+const bookForm = document.getElementById("bookForm");
+const trainingForm = document.getElementById("trainingForm");
+const physicalForm = document.getElementById("physicalForm");
 
 //Commit For GITTTT
-function onClickBookATrip(){
-
+function onClickBookATrip(event){
+    event.preventDefault();
       const user = auth.currentUser;
       if (user) {
           var startDate = document.getElementById("date1");
@@ -28,8 +31,8 @@ function onClickBookATrip(){
     
 
 }
-function onClickBookATraining(){
-
+function onClickBookATraining(event){
+    event.preventDefault();
     const user = auth.currentUser;
     if (user) {
         var startDateT = document.getElementById("dateTraining");
@@ -48,7 +51,8 @@ function onClickBookATraining(){
       }
   
 }
-function onClickBookAPhysical(){
+function onClickBookAPhysical(event){
+    event.preventDefault();
     const user = auth.currentUser;
     if (user) {
         var startDateP = document.getElementById("physicalDate");
@@ -67,6 +71,6 @@ function onClickBookAPhysical(){
       }
 }
 
-bookButton.addEventListener('click', onClickBookATrip);
-trainingButton.addEventListener('click', onClickBookATraining);
-physicalButton.addEventListener('click', onClickBookAPhysical);
+bookForm.addEventListener('submit', onClickBookATrip);
+trainingForm.addEventListener('submit', onClickBookATraining);
+physicalForm.addEventListener('submit', onClickBookAPhysical);

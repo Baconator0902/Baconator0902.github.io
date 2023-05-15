@@ -3,8 +3,10 @@
        import {auth, database} from  "/src/firebaseInit.js";
 
         var submitButton = document.getElementById("submitButton");
-        console.log(submitButton);
+  
+        const submitForm = document.getElementById("signupForm");
         function onClickFunction(event) {
+            
             event.preventDefault();
             var email = document.getElementById("email").value;
             var password = document.getElementById("password1").value;
@@ -16,8 +18,7 @@
         // Signed in 
                  var user = userCredential.user;
                  var uid = user.uid;
-                console.log(user);
-                console.log(firstName);
+             
                 set(ref(database, 'users/' + uid),{
                         firstname : firstName,
                     })  .then(()=>{window.location.replace("./index.html");}, err => {console.error(err)});
@@ -32,4 +33,4 @@
              });}
            
         
-        submitButton.addEventListener('submit', onClickFunction);
+        submitForm.addEventListener('submit', onClickFunction);

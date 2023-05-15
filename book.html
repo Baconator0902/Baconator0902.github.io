@@ -176,7 +176,7 @@
         
                     <div class="hiddenDropdown" id="bookTripDIV" style="grid-column: 2;">
                     
-                        <form>
+                        <form id="bookForm">
                             <h2>Book a Trip</h2>
                             <label for="first_name">First name:</label>
                             <input type="text" id="first_name" name="first_name" placeholder="John" required pattern="[A-Z][a-z]*">
@@ -197,7 +197,7 @@
                             <input type="number" id="trip_length" name="trip_length" min="4" max="100" value="10" required>
                             <br>
                             <label for="launch_location" id="launchLocationLabel">Launch Location</label>
-                            <select id="launch_location" name="launch_location">
+                            <select id="launch_location" name="launch_location" required>
                                 <option value="USA">USA</option>
                                 <option value="RUSSIA">RUSSIA</option>
                                 <option value="SPAIN">SPAIN</option>
@@ -209,22 +209,22 @@
                               </select>
                             <br>
                             <label for="covid_test">Proof of Covid Screening</label>
-                            <input type="file" id="covid_test">
+                            <input type="file" id="covid_test" required>
                             <br>
                             <label for="flight_training_cert">Flight Training Certificate</label>
-                            <input type="file" id="flight_training_cert">
+                            <input type="file" id="flight_training_cert" required>
                             <br>
                             <label for="astro_phys">Astronaut Physical</label>
-                            <input type="file" id="astro_phys">
+                            <input type="file" id="astro_phys" required>
                             <br>
-                            <button id = "bookSubmit" type="button" class="submitingButtons">Book</button>
+                            <button id = "bookSubmit"  class="submitingButtons">Book</button>
                               <!--onclick="tripBooked()"-->
                         </form>
                     </div>
             
                     <div class="hiddenDropdown" id="bookFlightTraining" style="display: none; grid-column: 2;">
                         
-                        <form>
+                        <form id="trainingForm">
                             <h2>Book a Flight Training</h2>
                             <label for="first_name">First name:</label>
                             <input type="text" id="first_name" name="first_name" placeholder="John" required pattern="[A-Z][a-z]*">
@@ -242,12 +242,12 @@
                             <input type="date" id="dateTraining" name="date" required>
                             <br>
                             <label for="covid_test">Proof of Covid Screening</label>
-                            <input type="file" id="covid_test">
+                            <input type="file" id="covid_test" required>
                             <br>
                             <label for="astro_phys">Astronaut Physical</label>
-                            <input type="file" id="astro_phys">
+                            <input type="file" id="astro_phys" required>
                             <br>
-                            <button id = "trainingSubmit" type="button" class="submitingButtons">Submit Training</button>
+                            <button id = "trainingSubmit"  class="submitingButtons">Submit Training</button>
             
                         </form>
                     </div>
@@ -255,7 +255,7 @@
             
                     <div class="hiddenDropdown" id="bookAstroPhys" style="display: none; grid-column: 2;">
                         
-                        <form>
+                        <form id="physicalForm">
                             <h2>Book an Astronaut Physical</h2>
                             <label for="first_name">First name:</label>
                             <input type="text" id="first_name" name="first_name" placeholder="John" required pattern="[A-Z][a-z]*">
@@ -273,9 +273,9 @@
                             <input type="date" id="physicalDate" name="date" required>
                             <br>
                             <label for="covid_test">Proof of Covid Screening</label>
-                            <input type="file" id="covid_test">
+                            <input type="file" id="covid_test" required>
                             <br>
-                            <button id = "physicalSubmit" type="button"  class="submitingButtons">Submit Physical</button>
+                            <button id = "physicalSubmit"   class="submitingButtons">Submit Physical</button>
             
                         </form>
                     </div>

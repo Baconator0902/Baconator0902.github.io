@@ -1,14 +1,12 @@
         import initialized, {createUserWithEmailAndPassword, onAuthStateChanged, set, ref } from "./firebaseInit.js";
 
         var submitButton = document.getElementById("submitButton");
-        console.log(submitButton);
+       
         var auth2 = auth;
         function onClickFunction() {
             var email = document.getElementById("email").value;
             var password = document.getElementById("password1").value;
-            console.log(email);
-            console.log(auth2);
-            console.log(database);
+          
             setPersistence(auth2, browserSessionPersistence).then(() => { 
                 
                 
@@ -17,7 +15,7 @@
                 .then((userCredential) => {
         // Signed in 
                  var user = userCredential.user;
-                console.log(user);
+       
                 set(ref(database, 'users/' + user.uid),{
                     email: email,
                 });

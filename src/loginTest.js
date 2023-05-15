@@ -4,16 +4,17 @@ import{signInWithEmailAndPassword} from 'https://www.gstatic.com/firebasejs/9.17
 
 
     var loginButton =  document.getElementById("loginButton");
-    console.log(loginButton);
-    
 
-function onClickFunction2() {
+    const loginForm = document.getElementById("loginForm");
+
+function onClickFunction2(event) {
+
+    event.preventDefault();
 
     var email = document.getElementById("username2").value;
     
     var password = document.getElementById("password3").value;
-    console.log(email);
-    console.log(auth);
+    
    signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
 // Signed in 
@@ -28,4 +29,4 @@ const errorMessage = error.message;
 // ..
  });
 }
-loginButton.addEventListener('click', onClickFunction2);
+loginForm.addEventListener('submit', onClickFunction2);
