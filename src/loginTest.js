@@ -5,7 +5,7 @@ import{signInWithEmailAndPassword} from 'https://www.gstatic.com/firebasejs/9.17
 
     var loginButton =  document.getElementById("loginButton");
 
-    const loginForm = document.getElementById("loginForm");
+    var loginForm = document.getElementById("loginForm");
 
 function onClickFunction2(event) {
 
