@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="">
     <script src="js/navbar.js"></script>
     <script src="js/home.js"></script>
+    <script src="js/animation.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet"> 
@@ -205,6 +206,32 @@
             grid-template-rows: 10vh 35vh 35vh 35vh;
             padding-bottom: 10vh;
           }
+
+          #movingRocket {
+            width: 20vw;
+            visibility: hidden;
+            height: auto;
+            top: 50%;
+            position: absolute;
+          }
+
+          .rocketFlying {
+            left: 0%;
+            transform: rotate(110deg);
+            animation-name: flying;
+            animation-delay: 0.5s;
+            animation-duration: 2s;
+            animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          }
+
+          @keyframes flying {
+            0%   {left: 0%; visibility:visible;}
+            100% {left: 100%;visibility:visible;top: 10%;}
+        }
+
+          .rocketDone {
+            display: none;
+          }
          
     </style>
 </head>
@@ -234,12 +261,15 @@
            </nav>
         </div>
 
+        <img src="images/nationals/RocketwithFire.svg" id="movingRocket">
+
         <main>
-            <section id="topHead">
+            <section id="topHead" onmouseenter="flyRocket()";>
                 <div id="leftTable">
                     <h1 id="tableHead">TO THE STARS</h1>
                     <p id="missionText"><b>OUR MISSION:</b><br> As the first true space tourism company on the planet, TO THE STARS is committed to providing all customers with the best possible space adventure. We believe that everyone deserves the opportunity to make it to space, Earth's final frontier. We offer training plans and opportunities for any travelers who need a certification to meet our travel requirements, as well as vacation style trips for any group which meets the travel requirements. We also allow people to book solely training plans, if they only want to complete astronaut training, rather than taking a full trip to outer space at the moment.</p>
                     <br>
+                    
                     <button id="bookButton" style="color: rgb(170, 86, 23); display: block;" onclick="bookNow2()">BOOK NOW</button>
                 </div>
                 <div id="rightTable">
@@ -359,6 +389,15 @@
     toAnimate.hover(function(){
         $(this).addClass("navAnimation");        
     })
+
+
+function flyRocket() {
+  var toAnimate = $("#movingRocket");
+  console.log('functionIsWorking')
+    $(toAnimate).addClass("rocketFlying");        
+  }
+
+
     </script>
    
     <script src="js/home.js"></script>
