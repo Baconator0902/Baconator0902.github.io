@@ -1,5 +1,7 @@
 function reveal() {
+
             var reveals = document.querySelectorAll(".reveal");
+
 
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
@@ -8,7 +10,7 @@ function reveal() {
 
                 if (elementTop < windowHeight - elementVisible) {
                 reveals[i].classList.add("active");
-                } else {
+                } else if (reveals[i].getBoundingClientRect().bottom > windowHeight){
                 reveals[i].classList.remove("active");
                 }
             }
