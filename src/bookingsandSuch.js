@@ -27,24 +27,13 @@ function onClickBookATrip(event){
   
         } else {
             window.alert("Trip succesfully planned. To save a booking, please create an account and resubmit");
-        }
-    
-          } else {
-              window.alert("Trip succesfully planned. To save a booking, please create an account and resubmit");
-          }
+        } 
           
     } /*else {
         alert("Please fill in all fields");
     } */
-
-<<<<<<< HEAD
-function onClickBookATraining(){
-
-=======
-}
 function onClickBookATraining(event){
     event.preventDefault();
->>>>>>> c9dbd36269365c4d0287beadcf660d7603883faf
     const user = auth.currentUser;
     if (user) {
         var startDateT = document.getElementById("dateTraining");
