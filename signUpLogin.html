@@ -8,6 +8,7 @@
     <link rel="stylesheet" media="screen and (min-width: 1600px)" href="css/main.css">
     <link href="/favicon.ico" type="image/x-icon" rel="icon" />
     <script src="js/navbar.js"></script>
+    <script src="js/animation.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -151,7 +152,7 @@
         
         <div class="hiddenDropdown" id="signUpDiv">
             
-            <form>
+            <form id="signupForm">
                 <h2>Sign Up</h2>
                 <label for="first_name">First name*</label>
                 <input type="text" id="first_name" name="first_name" placeholder="John" required pattern="[A-Z][a-z]*">
@@ -160,11 +161,11 @@
                 <input type="text" id="last_name" name="last_name" placeholder="Doe" required pattern="[A-Z][a-z]*">
                 <br>
                 <label for="age">Birth date*</label>
-                <input type="text" id="age" name="age" required placeholder="MM/DD/YYYY" onfocus="(this.type='date')">
+                <input type="text" id="age" name="age" required placeholder="MM/DD/YYYY" onfocus="(this.type='date')" >
                 <br>
          
                 <label for="phoneNumber">Phone Number</label>
-                <input type="text" id="phoneNumber" name="phoneNumber" placeholder="191-123-456-7890">
+                <input type="text" id="phoneNumber" name="phoneNumber" placeholder="191-123-456-7890" required>
                 <br>
                 <label for="Email">Email*</label>
                 <input type="text" id="email" name="Email" placeholder="tothe.stars@gmail.com" required>
@@ -189,7 +190,7 @@
                     <input type="checkbox" id="termsAndConditions" style="padding: 0; margin: 0; position: relative; vertical-align:middle; width:fit-content" name="termsAndConditions" required> 
                 </span> 
                 <!--<input type="submit" id ='signUp' name = "signup_submit" value = "Sign Up">-->
-                <button id = "submitButton" class="buttonToAnimate" type="button">Sign Up</button>
+                <button id = "submitButton" class="buttonToAnimate">Sign Up</button>
                 
             </form>
             
@@ -197,7 +198,7 @@
 
         <div class="hiddenDropdown" id="logInDiv" style="display: none;">
             
-            <form>
+            <form id="loginForm">
                 <h2>Log In</h2>
                 <label for="Email">Email*</label>
                 <input type="text" id="username2" name="Email" placeholder="tothe.stars@gmail.com" required>
@@ -209,7 +210,7 @@
                 <a href="forgotPassword.html">Forgot password?</a>
                 <br>
                 
-                <button id = "loginButton" class="buttonToAnimate" type="button">Log In</button>
+                <button id = "loginButton" class="buttonToAnimate">Log In</button>
 
             </form>
         </div>
@@ -235,6 +236,7 @@
     <script type = "module" src = "src/firebaseInit.js"></script>
     <script type="module" src="src/navbarController.js"></script>
     <script type ="module" src="src/loginTest.js"></script>
+    <script type ="module" src="src/signUp.js"></script>
 
     <script>
         $(":button").bind("webkitAnimationEnd mozAnimationEnd animationend", function(){

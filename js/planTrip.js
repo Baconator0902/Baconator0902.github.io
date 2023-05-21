@@ -1,12 +1,5 @@
 function planTripFormSubmit() {
-    locations = document.getElementsByName('launch_location');
-    for(i = 0; i < locations.length; i++) {
-        if(locations[i].checked) {
-            checkedLocation = locations[i];
-            locationNumber = i;
-            console.log(checkedLocation);
-        }
-    }
+    newLocation = document.getElementById('launch_location').value;
 
     partySize = document.getElementById("party_size").value;
     length = document.getElementById("trip_length").value;
@@ -15,7 +8,7 @@ function planTripFormSubmit() {
     monthDays = date.charAt(6);
     month = monthTens + monthDays;
 
-    cost = ((1 + (1 / (locationNumber + 3))) * 200) * ((partySize + 10) / 15) * (length * 200) * 0.2;
+    cost = ((((newLocation))) / 100) * ((partySize + 10) / 15) * (length * 200) * 0.015;
     if (month > 5 && month < 9) {
         cost *= 1.2;
     } else if (month < 3 || month > 11) {
@@ -23,9 +16,8 @@ function planTripFormSubmit() {
     }
     costToDisplay = Math.round((cost + Number.EPSILON) * 100) / 100;
 
-    predictedCostText = document.getElementById("predictedCostText2");
-    document.getElementById("predictedCostText").style.display = "block";
+    predictedCostText = document.getElementById("predictedCostText");
     predictedCostText.style.display = "block";
-    predictedCostText.innerHTML = "$" + costToDisplay.toLocaleString("en-US");
+    predictedCostText.innerHTML = "Your predicted cost is: $" + costToDisplay.toLocaleString("en-US");
 
 }

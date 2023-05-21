@@ -3,7 +3,7 @@ import{signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateCh
 import{ getDatabase, ref, onValue } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js';
 
 function getUser(userId){
-
+//I wanna keep this
 
 return onValue(ref(database, 'users/' + userId), (snapshot) => {
     const firstName = (snapshot.val() && snapshot.val().firstname);

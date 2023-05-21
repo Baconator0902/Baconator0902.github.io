@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
 
-html { height: 100%;} body { min-height: 100%; }
+html { height: 100%;background-color: #FFF1E7;} body { min-height: 100%; background-color: #FFF1E7;}
 
 * {/*border: 1px solid red;*/
-    padding: 20px;
+    padding: 15px;
     font-style: normal;
     font-weight: 400;
     color: rgb(170, 86, 23);
@@ -49,7 +49,7 @@ li {
   font-size: 1.2em;
 }
 
-input {
+input, select {
   font-size: 1.3em;
 }
 
@@ -161,6 +161,7 @@ ul {
       margin: 0;
   }
 
+
 button {
   color: rgb(170, 86, 23);
   cursor: pointer;
@@ -185,7 +186,7 @@ form > h2 {
   text-align: center;
 }
 
-input {
+input, select {
 
   transition: border-color 0.5s ease-in-out;
   color: black;
@@ -227,6 +228,19 @@ input:required:invalid {
 input:valid {
   border-color: hsl(120, 76%, 50%);
 }
+
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+  }
+
+  .reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+  }
 
 label {
   color: black;
@@ -272,7 +286,7 @@ main * {
     display: block;
 }
 
-input {
+input, select {
     margin-left: 40vw !important;
 }
 

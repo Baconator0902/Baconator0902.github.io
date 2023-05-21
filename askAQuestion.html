@@ -8,6 +8,7 @@
     <link rel="stylesheet" media="screen and (max-width: 1600px)" href="css/phone.css">
     <link rel="stylesheet" media="screen and (min-width: 1600px)" href="css/main.css">
     <script src="js/navbar.js"></script>
+    <script src="js/animation.js"></script>
     <script src="js/askQuestion.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     
@@ -33,6 +34,7 @@
         p {
             margin-top: 1vh;
         }
+        
     </style>
 </head>
 <body>
@@ -90,6 +92,27 @@
         <script type="module" src="src/navbarController.js"></script>
      
     
+        <script id="footerandnavanimations">
+            var elementsInNavToAnimate = $("#navBar").children().children().children();
+            var footerElementsToAnimate = $("#footer").children().children().children();
+            console.log(footerElementsToAnimate);
+            var toAnimate = $(elementsInNavToAnimate).add(footerElementsToAnimate);
+            console.log(toAnimate);
+            toAnimate.bind("webkitAnimationEnd mozAnimationEnd animationend", function(){
+            $(this).removeClass("navAnimation");
+        })
     
+        toAnimate.hover(function(){
+            $(this).addClass("navAnimation");        
+        })
+        </script>
+     <footer id="footer">
+        <ul>
+            <li>Copyright © 2023</li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="references.html">References</a></li>
+        </ul>
+    </footer>
+
 </body>
 </html>

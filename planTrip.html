@@ -7,6 +7,7 @@
     <link rel="stylesheet" media="screen and (max-width: 1600px)" href="css/phone.css">
     <link rel="stylesheet" media="screen and (min-width: 1600px)" href="css/main.css">
     <script src="js/navbar.js"></script>
+    <script src="js/animation.js"></script>
     <link rel="stylesheet" href="css/model.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,9 +28,7 @@
             flex-direction: row;
             flex-wrap: nowrap;
         }
-        input[type="radio"] {
-            width: 5vw;
-        }
+        
 
         @media only screen and (max-width: 1600px) {
             #costsForTraining {
@@ -40,12 +39,12 @@
                 width: 50vw;
                 font-size: 20px;
             }
-            input {
+            input, select {
                 margin-left: auto !important;
                 margin-right: auto !important;
                 width: 60vw;
             }
-            input [type="radio"] {
+            select {
                 position: relative;
             }
             #launchLocationLabel {
@@ -59,13 +58,10 @@
             label {
                 position: absolute;
             }
-            input {
+            input, select {
                 position: relative;
                 margin-left: 15vw;
                 width: 25vw;
-            }
-            #launchLocationLabel {
-                margin-left: 27vw;
             }
           }
         #costsForTraining {
@@ -122,7 +118,7 @@
         </div>
     
         <main>
-            <section>
+            <section id="noClass">
 
                 <h2>Estimate cost</h2>
                 <div style="display: flex; justify-content: center;">
@@ -138,32 +134,17 @@
                         <label for="trip_length">Trip Length (days)</label>
                         <input type="number" id="trip_length" name="trip_length" min="4" max="100" value="10" required>
                         <br>
-                        <label for="launch_location" style="display: block;" id="launchLocationLabel">Launch Location</label>
-                        <br>
-                        <input type="radio" id="USA" name="launch_location" value="USA">
-                        <label for="USA" id="launch_location" class="countryLabel">USA</label>
-                        <br>
-                        <input type="radio" id="RUSSIA" name="launch_location" value="RUSSIA">
-                        <label for="RUSSIA" class="countryLabel">RUSSIA</label>
-                        <br>
-                        <input type="radio" id="SPAIN" name="launch_location" value="SPAIN">
-                        <label for="SPAIN" class="countryLabel">SPAIN</label>
-                        <br>
-                        <input type="radio" id="GERMANY" name="launch_location" value="GERMANY">
-                        <label for="GERMANY" class="countryLabel">GERMANY</label>
-                        <br>
-                        <input type="radio" id="FRANCE" name="launch_location" value="FRANCE">
-                        <label for="FRANCE" class="countryLabel">FRANCE</label>
-                        <br>
-                        <input type="radio" id="ITALY" name="launch_location" value="ITALY">
-                        <label for="ITALY" class="countryLabel">ITALY</label>
-                        <br>
-                        <input type="radio" id="INDIA" name="launch_location" value="INDIA">
-                        <label for="INDIA" class="countryLabel">INDIA</label>
-                        <br>
-                        <input type="radio" id="CHINA" name="launch_location" value="CHINA">
-                        <label for="CHINA" class="countryLabel">CHINA</label>
-                        <br>
+                        <label for="launch_location" id="launchLocationLabel">Launch Location</label>
+                        <select id="launch_location" name="launch_location">
+                            <option value="111000">USA</option>
+                            <option value="64000">RUSSIA</option>
+                            <option value="118000">SPAIN</option>
+                            <option value="124000">GERMANY</option>
+                            <option value="131000">FRANCE</option>
+                            <option value="121000">ITALY</option>
+                            <option value="73000">INDIA</option>
+                            <option value="80000">CHINA</option>
+                          </select>
                         <br>
                         <button onclick="planTripFormSubmit()" style="height: fit-content;">Estimate Cost</button>
         
