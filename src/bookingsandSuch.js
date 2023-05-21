@@ -3,11 +3,8 @@ import{auth, database} from '/src/firebaseInit.js';
 import{ onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
 import { set, ref, child, push, update } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
 var bookButton =  document.getElementById("bookSubmit");
-console.log(bookButton);
 var trainingButton =  document.getElementById("trainingSubmit");
-console.log(trainingButton);
 var physicalButton =  document.getElementById("physicalSubmit");
-console.log(physicalButton);
 
 function onClickBookATrip(){
     /*
@@ -47,10 +44,6 @@ function onClickBookATrip(){
         alert("Please fill in all fields");
     } */
 
-      
-    
-
-}
 function onClickBookATraining(){
 
     const user = auth.currentUser;
