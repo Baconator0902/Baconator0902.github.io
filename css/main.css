@@ -79,7 +79,7 @@ nav {
 }
 
 nav > ul > img {
-  transition: scale 0.5s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 nav > ul > img:hover {
   transform: scale(1.1);
@@ -198,6 +198,7 @@ form > h2 {
 
 select {
   cursor: pointer;
+  
 }
 
 input, select {
@@ -310,4 +311,11 @@ button:hover {
   .reveal.active{
   transform: translateY(0);
   opacity: 1;
+  }
+
+  .bigImage {
+    transition: 1s transform;
+  }
+  .bigImage:hover {
+    transform: scale(1.1);
   }
