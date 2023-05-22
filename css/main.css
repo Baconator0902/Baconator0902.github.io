@@ -112,6 +112,7 @@ footer {
 
 footer > ul {
   display: grid;
+  list-style-type: disclosure-open;
   grid-template-columns: 50% 20% 20% 10%;
 }
 
@@ -153,9 +154,7 @@ ul {
   li a {
     color: #EFE8CC;
     margin: 0;
-    display: block;
     text-align: center;
-    padding: 0;
     text-decoration: none;
   }
   
